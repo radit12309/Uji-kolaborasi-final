@@ -185,6 +185,7 @@
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
+</div>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Alat tulis</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">Snowman Board Marker</h3>
@@ -199,8 +200,6 @@
   <button onclick="add('Snowman Board Marker',80000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 
-</div>
-</div>
 </div>
 </div>
 </div>
