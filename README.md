@@ -50,7 +50,7 @@
 <div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-12 gap-16 items-center relative z-10">
 <div class="lg:col-span-7">
 <span class="text-gold font-body text-xs font-bold tracking-[0.3em] uppercase mb-6 block">“Warisan • Sejak 2010”</span>
-<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tight mb-8 leading-[1.05]" style=: white;>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tight mb-8 leading-[1.05]">
                 Solusi Kebutuhan Kantor <br/>
 <span class="serif-italic text-gold">Terbaik &amp; Terpercaya</span>
 </h1>
