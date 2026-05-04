@@ -524,6 +524,7 @@
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
+</div>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Peralatan</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">lem fox 150 gram</h3>
@@ -540,12 +541,12 @@
 </div>
 </div>
 </div>
-</div>
 <!-- Product Card 19 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
 <img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Lakban.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+</div>
 </div>
 </div>
 <div class="p-8 flex flex-col flex-grow">
@@ -561,7 +562,6 @@
 
   <button onclick="add('Paket 6 roll',50000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
-</div>
 </div>
 </div>
 </div>
