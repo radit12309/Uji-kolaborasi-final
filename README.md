@@ -50,7 +50,7 @@
 <div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-12 gap-16 items-center relative z-10">
 <div class="lg:col-span-7">
 <span class="text-gold font-body text-xs font-bold tracking-[0.3em] uppercase mb-6 block">“Warisan • Sejak 2010”</span>
-<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tight mb-8 leading-[1.05]">
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tight mb-8 leading-[1.05]" style=: white;>
                 Solusi Kebutuhan Kantor <br/>
 <span class="serif-italic text-gold">Terbaik &amp; Terpercaya</span>
 </h1>
@@ -635,24 +635,6 @@
 </div>
 </div>
 </div>
-</section>
-<!-- Contact Section -->
-<section class="py-32" id="contact">
-<div class="max-w-7xl mx-auto px-5">
-<div class="grid lg:grid-cols-12 gap-20">
-<div class="lg:col-span-5">
-<h2 class="text-5xl font-headline font-extrabold text-primary mb-12">Mari <span class="serif-italic">Datang Langsung</span></h2>
-<div class="space-y-12">
-<div class="flex gap-8 group">
-<div class="shrink-0 w-14 h-14 bg-surface-container-high border border-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
-<span class="material-symbols-outlined">location_on</span>
-</div>
-<div>
-<h5 class="font-headline font-bold text-lg text-primary mb-2">Headquarters</h5>
-<p class="text-on-surface-variant font-light" >
- <a href="https://www.google.com/maps?q=-8.123456,113.123456" target="_blank"style="color:blue;">
-  R9JC+JH9 Sumberagung, Kabupaten Jember, Jawa Timur
-</a></p>
 <script>
 let cart = {};
 
