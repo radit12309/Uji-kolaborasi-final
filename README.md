@@ -100,7 +100,7 @@
 <!-- Product Card 1 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-![image alt](https://github.com/radit12309/Uji-kolaborasi-final/blob/d29699b1b561e19fdc953c0ad2bbd2cc42711f0f/kertas.jpg)
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="kertas.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -125,7 +125,7 @@
     <!-- Product Card 2 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penyimpanan bersama internal/Isistapler.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Isistapler.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -150,7 +150,7 @@
 <!-- Product Card 3 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Joyko" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Stapler Penyimpanan bersama internal/joyko.jpg"/>
+<img alt="Joyko" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Staplerjoyko.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -175,7 +175,7 @@
 <!-- Product Card 4 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Snowman" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penyimpanan bersama internal/PulpenSnowman.jpg"/>
+<img alt="Snowman" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="PulpenSnowman.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -201,7 +201,7 @@
   <!-- Product Card 5 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penyimpanan bersama internal/Penanda warna.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penanda warna.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -226,7 +226,7 @@
   <!-- Product Card 6 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penyimpanan bersama internal/PulpenAE7.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="PulpenAE7.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -250,7 +250,7 @@
  <!-- Product Card 7 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penyimpanan bersama internal/Pilot BP-S.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Pilot BP-S.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -274,7 +274,7 @@
 <!-- Product Card 8 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penyimpanan bersama internal/Buku tulis.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Buku tulis.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -298,7 +298,7 @@
 <!-- Product Card 9 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penyimpanan bersama internal/Catatan tempel.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Catatantempel.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -322,7 +322,7 @@
 <!-- Product Card 10 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penyimpanan bersama internal/Amplop.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Amplop.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -346,7 +346,7 @@
 <!-- Product Card 11 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penyimpanan bersama internal/Binder clip.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Binder clip.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -370,7 +370,7 @@
 <!-- Product Card 12 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penyimpanan bersama internal/Paper clip.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Paperclip.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -394,7 +394,7 @@
 <!-- Product Card 13 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penyimpanan bersama internal/Map.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Map.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -418,7 +418,7 @@
 <!-- Product Card 14 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penyimpanan bersama internal/Ordner.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Ordner.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -442,7 +442,7 @@
 <!-- Product Card 15 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penyimpanan bersama internal/Gunting.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Gunting.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -466,7 +466,7 @@
 <!-- Product Card 16 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penyimpanan bersama internal/Cutter.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Cutter.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -490,7 +490,7 @@
 <!-- Product Card 17 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Isi Penyimpanan bersama internal/cutter.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Isicutter.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -514,7 +514,7 @@
 <!-- Product Card 18 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penyimpanan bersama internal/Lem.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Lem.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -538,7 +538,7 @@
 <!-- Product Card 19 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penyimpanan bersama internal/Lakban.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Lakban.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
