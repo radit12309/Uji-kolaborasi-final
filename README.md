@@ -39,7 +39,7 @@
 <a class="font-body text-sm tracking-wide text-primary hover:text-secondary transition-colors" href="#contact">Contact</a>
 </div>
 <div class="flex items-center gap-6">
-<img src="Penyimpanan bersama internal/LogATKsejahtera2.png" alt="Logo" width="70" height="50">
+<img src="LogATKsejahtera2.png" alt="Logo" width="70" height="50">
 </div>
 </div>
 </nav>
@@ -201,7 +201,7 @@
   <!-- Product Card 5 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penanda warna.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Penandawarna.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -250,7 +250,7 @@
  <!-- Product Card 7 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Pilot BP-S.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="PilotBP-S.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -346,7 +346,7 @@
 <!-- Product Card 11 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Binder clip.jpg"/>
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Binderclip.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
@@ -707,4 +707,3 @@ function checkout(){
 </div>
 </div>
 </div>
-</body>
