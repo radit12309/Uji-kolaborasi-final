@@ -97,7 +97,7 @@
 <h2 class="text-5xl font-headline font-extrabold text-primary tracking-tight">Koleksi Instrumen Premium</h2>
 </div>
 <!-- Product Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+<div class="grid grid-cols-2 gap-4">
 <!-- Product Card 1 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
