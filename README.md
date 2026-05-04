@@ -118,11 +118,10 @@
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 55.000</p>
 <div class="flex items-center gap-2 mt-3">
-  <button onclick="remove('Paperline A4 80gsm')" 
-    class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
-  <button onclick="add('Paperline A4 80gsm',55000)" 
-    class="px-3 py-1 bg-green-500 text-white rounded">+</button>
+<button onclick="remove('Paperline A4 80gsm')" 
+class="px-3 py-1 bg-red-500 text-white rounded">-</button>
+<button onclick="add('Paperline A4 80gsm',55000)" 
+class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
 </div>
