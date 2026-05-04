@@ -51,7 +51,7 @@
 <div class="lg:col-span-7">
 <span class="text-gold font-body text-xs font-bold tracking-[0.3em] uppercase mb-6 block">“Warisan • Sejak 2010”</span>
 <h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tight mb-8 leading-[1.05]">
-                Solusi Kebutuhan Kantor <br/>
+                Solusi Kebutuhan Kantor
 <span class="serif-italic text-gold">Terbaik &amp; Terpercaya</span>
 </h1>
 <p class="text-lg text-slate-300 max-w-xl mb-12 leading-relaxed font-light">
