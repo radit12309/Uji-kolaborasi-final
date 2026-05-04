@@ -100,7 +100,7 @@
 <!-- Product Card 1 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-![image alt](image_url)
+![image alt](https://github.com/radit12309/Uji-kolaborasi-final/blob/d29699b1b561e19fdc953c0ad2bbd2cc42711f0f/kertas.jpg)
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
