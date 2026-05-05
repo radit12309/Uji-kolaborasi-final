@@ -77,14 +77,7 @@
 <p class="text-lg text-slate-300 max-w-xl mb-12 leading-relaxed font-light">
                 Menghadirkan kurasi instrumen tulis profesional untuk mendukung ketajaman karya Anda. Dedikasi kami adalah memastikan produktivitas Anda tanpa kompromi.
             </p>
-<div class="flex flex-wrap gap-6">
-<a class="px-10 py-5 bg-gold text-on-primary rounded-full font-body font-bold text-sm tracking-widest uppercase premium-shadow hover:translate-y-[-2px] transition-all hover:bg-secondary-container" href="#catalog">
-                    Eksplorasi Katalog
-                </a>
-<a class="px-10 py-5 border border-slate-500 text-on-primary rounded-full font-body font-bold text-sm tracking-widest uppercase hover:bg-white hover:text-primary transition-all" href="#about">
-                    Visi &amp; Misi
-                </a>
-</div>
+
 </div>
   <div style="color:white;">
     <ul>
