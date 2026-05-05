@@ -554,7 +554,8 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 
 <!-- 🛒 Keranjang -->
-<div class="mt-20 p-6 bg-white border rounded-lg shadow">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+ <div class="mt-20 p-6 bg-white border rounded-lg shadow">
   <h2 class="text-xl font-bold mb-3">Keranjang</h2>
 
   <div id="cartItems" class="text-sm mb-3">Kosong</div>
@@ -567,6 +568,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
   </button>
 </div>
 </section>
+</div>
 <!-- About Section -->
 <section class="py-40 bg-surface-container-low relative overflow-hidden" id="about">
 <div class="absolute -right-20 top-0 opacity-[0.03] select-none pointer-events-none">
