@@ -98,6 +98,7 @@
 <div class="max-w-2xl">
 <span class="text-secondary font-body text-xs font-bold tracking-[0.3em] uppercase mb-4 block">Seasonal Selection</span>
 <h2 class="text-5xl font-headline font-extrabold text-primary tracking-tight">Koleksi Instrumen Premium</h2>
+ </div>
 </div>
 <!-- Product Grid -->
 <div class="grid grid-cols-2 gap-4">
