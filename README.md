@@ -509,32 +509,8 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
 </div>
+
 <!-- Product Card 18 -->
-<div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
-<div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Lem.jpg"/>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-</div>
-</div>
-</div>
-<div class="p-8 flex flex-col flex-grow">
-<span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Peralatan</span>
-<h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">lem fox 150 gram</h3>
-<div class="flex flex-col gap-4">
-<p class="text-sm font-body font-medium text-slate-400">Harga per pack(12 pcs)</p>
-<div class="flex justify-between items-end">
-<p class="text-2xl font-headline font-extrabold text-primary">Rp 120.000</p>
-<button onclick="remove('lem fox 150 gram')" 
-    class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
-
-  <button onclick="add('lem fox 150 gram',120000)" 
-    class="px-3 py-1 bg-green-500 text-white rounded">+</button>
-</div>
-</div>
-</div>
-</div>
-<!-- Product Card 19 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
 <img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Lakban.jpg"/>
