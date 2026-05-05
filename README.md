@@ -535,11 +535,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
 </div>
-<div class="mt-24 text-center">
-<a class="inline-block px-12 py-6 border-2 border-primary text-primary font-body font-bold text-sm tracking-widest uppercase hover:bg-primary hover:text-white transition-all duration-300" href="#">
-                Katalog Lengkap (2024)
-            </a>
-</div>
+
 </div>
 <!-- 🛒 Keranjang -->
 <div class="mt-20 p-6 bg-white border rounded-lg shadow">
