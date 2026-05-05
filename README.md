@@ -540,6 +540,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
 </div>
+</div>
 <!-- Product Card 19 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
@@ -561,6 +562,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 
   <button onclick="add('Paket 6 roll',50000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
+</div>
 </div>
 </div>
 </div>
