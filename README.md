@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <html class="light" lang="id"><head>
 
  <meta charset="utf-8"/>
