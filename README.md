@@ -510,7 +510,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
 
-<!-- Product Card 18 -->
+<!-- Product Card 19 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
 <img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Lakban.jpg"/>
