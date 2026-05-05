@@ -41,7 +41,6 @@
 <a class="font-body text-sm tracking-wide font-semibold text-secondary border-b-2 border-secondary pb-1" href="#home">Home</a>
 <a class="font-body text-sm tracking-wide text-primary hover:text-secondary transition-colors" href="#catalog">Catalog</a>
 <a class="font-body text-sm tracking-wide text-primary 14171485931-secondary transition-colors" href="#about">About</a>
-<a class="font-body text-sm tracking-wide text-primary hover:text-secondary transition-colors" href="#contact">Contact</a>
 </div>
 <div class="flex items-center gap-6">
 <img src="LogATKsejahtera2.png" alt="Logo" width="70" height="50">
@@ -183,21 +182,24 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
-</div>
+
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Alat tulis</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">Snowman Board Marker</h3>
+
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga Per pack(12 pcs)</p>
+
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 80.000</p>
+
 <button onclick="remove('Snowman Board Marker')" 
-    class="px-3 py-1 bg-red-500 text-white rounded">-</button>
+class="px-3 py-1 bg-red-500 text-white rounded">-</button>
 
+<button onclick="add('Snowman Board Marker',80000)" 
+class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 
-  <button onclick="add('Snowman Board Marker',80000)" 
-    class="px-3 py-1 bg-green-500 text-white rounded">+</button>
-
+</div>
 </div>
 </div>
 </div>
