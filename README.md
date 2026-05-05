@@ -531,7 +531,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 
   <button onclick="add('Paket 6 roll',50000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
-</div>
+
 </div>
 </div>
 </div>
