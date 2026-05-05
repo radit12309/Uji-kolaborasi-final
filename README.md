@@ -72,7 +72,7 @@
 </div>
 </div>
   <div>
-    <ul>
+    <ul style="color:white;">
     <strong>cara pesan</strong>
       <li>-pilih produk yang diinginkan</li>
       <li>-ketuk + untuk menambahkan produk 1 pack dan ketuk - untuk mengurangi 1 pack produk</li>
