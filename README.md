@@ -546,7 +546,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 
 <!-- 🛒 Keranjang -->
 
-<h2><div class="relative mt-20 p-6 bg-white border rounded-lg shadow grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">Keranjang</h2>
+<h2><div class="relative mt-20 p-6 bg-white border rounded-lg shadow grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:ml-auto w-full lg:w-[400px]">Keranjang</h2>
 
   <div id="cartItems" class="text-sm mb-3">Kosong</div>
 
@@ -568,7 +568,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <div class="grid lg:grid-cols-2 gap-32 items-center">
 <div class="relative">
 <div class="absolute -top-10 -left-10 w-40 h-40 border-t-2 border-l-2 border-gold/20"></div>
-<span class="text-secondary font-body text-xs font-bold tracking-[0.3em] uppercase mb-6 block">Our Legacy</span>
+<span class="text-secondary font-body text-xs font-bold tracking-[0.3em] uppercase mb-6 block lg:ml-auto w-full lg:w-[500px]">Our Legacy</span>
 <h2 class="text-6xl font-headline font-extrabold text-primary leading-[1.1] mb-10">Presisi dalam <br/><span class="serif-italic">Setiap Goresan.</span></h2>
 <div class="space-y-8 text-xl font-light text-on-surface-variant leading-relaxed">
 <p>Kami percaya bahwa alat tulis kantor bukan sekadar pelengkap, melainkan instrumen esensial yang menjembatani ide dan realitas. Di <span class="text-primary font-bold">ATK Sejahtera</span>, kami mengkurasi setiap produk dengan standar akurasi tinggi.</p>
