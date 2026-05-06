@@ -543,7 +543,8 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>  
 </div>  
 </div>
-
+  <!-- KANAN -->
+  <div class="flex flex-col gap-8 lg:items-end">
 <!-- 🛒 Keranjang -->
 
 <h2><div class="relative mt-20 p-6 bg-white border rounded-lg shadow grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:ml-auto w-full lg:w-[400px]">Keranjang
