@@ -665,9 +665,3 @@ function checkout(){
   window.open("https://wa.me/6285655504887?text="+encodeURIComponent(pesan));
 }
 </script>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
