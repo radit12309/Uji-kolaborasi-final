@@ -561,7 +561,8 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 
 <!-- About Section -->
 <section class="py-40 bg-surface-container-low relative overflow-hidden" id="about">
-<div class="absolute -right-20 top-0 opacity-[0.03] select-none pointer-events-none">
+<div class="absolute -right-2
+ 0 top-0 opacity-[0.03] select-none pointer-events-none relative mt-20 p-6 bg-white border rounded-lg shadow grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 <span class="material-symbols-outlined text-[60rem]">history_edu</span>
 </div>
 <div class="max-w-7xl mx-auto px-8 relative z-10">
