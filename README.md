@@ -665,3 +665,20 @@ function checkout(){
   window.open("https://wa.me/6285655504887?text="+encodeURIComponent(pesan));
 }
 </script>
+<h1>Pengunjung: <span id="counter">0</span></h1>
+
+<script>
+function updateCounter() {
+  let count = localStorage.getItem("visitorCount") || 0;
+  document.getElementById("counter").innerText = count;
+}
+
+let count = localStorage.getItem("visitorCount") || 0;
+count++;
+localStorage.setItem("visitorCount", count);
+
+updateCounter();
+
+// Sync antar tab
+window.addEventListener("storage", updateCounter);
+</script>
