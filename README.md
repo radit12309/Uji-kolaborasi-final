@@ -39,6 +39,9 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+      * {
+      overflow-wrap: break-word;
+       }
     </style>
  </head>
 
