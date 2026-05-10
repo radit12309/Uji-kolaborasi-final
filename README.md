@@ -143,8 +143,8 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 23.000</p>
 <button onclick="remove('isi stapler Joyko HD-10')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
-
+<span id="qty-isi_stapler_Joyko_HD10">0</span>
+ 
   <button onclick="add('isi stapler Joyko HD-10',23000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
   
@@ -623,12 +623,14 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <script>
 let cart = {};
 
+// TAMBAH
 function add(nama,harga){
   if(!cart[nama]) cart[nama]={harga:harga,qty:0};
   cart[nama].qty++;
   render();
 }
 
+// KURANG 1
 function remove(nama){
   if(cart[nama]){
     cart[nama].qty--;
@@ -645,6 +647,25 @@ function removeItem(nama){
   render();
 }
 
+// 🔢 UPDATE ANGKA DI CARD
+function updateQtyDisplay(){
+
+  // reset semua ke 0
+  document.querySelectorAll("[id^='qty-']").forEach(el=>{
+    el.innerText = 0;
+  });
+
+  // isi sesuai cart
+  for(let i in cart){
+    let safeId = i.replace(/\s/g, "_").replace(/[^a-zA-Z0-9_]/g,"");
+    let el = document.getElementById("qty-" + safeId);
+    if(el){
+      el.innerText = cart[i].qty;
+    }
+  }
+}
+
+// RENDER KERANJANG
 function render(){
   let isi="";
   let total=0;
@@ -659,11 +680,13 @@ function render(){
 
   document.getElementById("cartItems").innerHTML = isi || "Kosong";
   document.getElementById("total").innerText = total;
+
+  updateQtyDisplay(); // 🔥 update angka di card
 }
 
+// CHECKOUT WA
 function checkout(){
 
-  // ❌ CEK KERANJANG KOSONG
   if(Object.keys(cart).length === 0){
     alert("Keranjang masih kosong!");
     return;
