@@ -56,7 +56,7 @@
 <div class="hidden md:flex items-center gap-10">
 <a class="font-body text-sm tracking-wide font-semibold text-secondary border-b-2 border-secondary pb-1" href="#home">Beranda</a>
 <a class="font-body text-sm tracking-wide text-primary hover:text-secondary transition-colors" href="#catalog">Katalog</a>
-<a class="font-body text-sm tracking-wide text-primary 14171485931-secondary transition-colors" href="#about">Tentang Kami</a>
+<a class="font-body text-sm tracking-wide text-primary 14171485931-secondary transition-colors" href="#catalog">Tentang Kami</a>
 </div>
 <div class="flex items-center gap-6">
 <img src="LogATKsejahtera2.png" alt="Logo" width="100" height="80">
@@ -107,7 +107,7 @@
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
 <img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="kertas.jpg"/>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"  id="#catalog">
 </div>
 </div>
 <div class="p-8 flex flex-col flex-grow">
