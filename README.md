@@ -633,7 +633,7 @@ function remove(nama){
   render();
 }
 
-// ❌ HAPUS LANGSUNG 1 PRODUK
+// HAPUS ITEM
 function removeItem(nama){
   if(cart[nama]){
     delete cart[nama];
@@ -641,15 +641,12 @@ function removeItem(nama){
   render();
 }
 
-// 🔢 UPDATE ANGKA DI CARD
+// UPDATE QTY DISPLAY
 function updateQtyDisplay(){
-
-  // reset semua ke 0
   document.querySelectorAll("[id^='qty-']").forEach(el=>{
     el.innerText = 0;
   });
 
-  // isi sesuai cart
   for(let i in cart){
     let safeId = i.replace(/\s/g, "_").replace(/[^a-zA-Z0-9_]/g,"");
     let el = document.getElementById("qty-" + safeId);
@@ -665,20 +662,20 @@ function render(){
   let total=0;
 
   for(let i in cart){
-    let sub=cart[i].harga*cart[i].qty;
-    total+=sub;
+    let sub = cart[i].harga * cart[i].qty;
+    total += sub;
 
-    isi+=`${i} x${cart[i].qty} = Rp ${sub}
+    isi += `${i} x${cart[i].qty} = Rp ${sub}
     <button onclick="removeItem('${i}')">❌</button><br>`;
   }
 
   document.getElementById("cartItems").innerHTML = isi || "Kosong";
   document.getElementById("total").innerText = total;
 
-  updateQtyDisplay(); // 🔥 update angka di card
+  updateQtyDisplay();
 }
 
-// CHECKOUT WA
+// CHECKOUT WA + ONGKIR 8.000
 function checkout(){
 
   if(Object.keys(cart).length === 0){
@@ -686,18 +683,26 @@ function checkout(){
     return;
   }
 
-  let pesan="Halo, saya ingin beli:\n";
-  let total=0;
+  let pesan = "Halo, saya ingin beli:\n";
+  let total = 0;
 
   for(let i in cart){
-    let sub=cart[i].harga*cart[i].qty;
-    total+=sub;
-    pesan+=`- ${i} x${cart[i].qty} = Rp ${sub}\n`;
+    let sub = cart[i].harga * cart[i].qty;
+    total += sub;
+    pesan += `- ${i} x${cart[i].qty} = Rp ${sub}\n`;
   }
 
-  pesan+=`\nTotal: Rp ${total}`;
+  // 🚚 ONGKIR FIX
+  let ongkir = 8000;
+  let grandTotal = total + ongkir;
 
-  window.open("https://wa.me/6285655504887?text="+encodeURIComponent(pesan));
+  pesan += `\nOngkir: Rp ${ongkir}`;
+  pesan += `\nTotal Barang: Rp ${total}`;
+  pesan += `\nTotal Bayar: Rp ${grandTotal}`;
+
+  window.open(
+    "https://wa.me/6285655504887?text=" + encodeURIComponent(pesan)
+  );
 }
 </script>
 <h1>Pengunjung: <span id="counter">0</span></h1>
