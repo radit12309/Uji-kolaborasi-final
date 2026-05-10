@@ -82,7 +82,7 @@
 </div>
   <div style="color:white;">
     <ul>
-    <strong>cara pesan</strong>
+    <il><strong>cara pesan</strong</il>
       <li>-pilih produk yang diinginkan</li>
       <li>-ketuk + untuk menambahkan produk 1 pack dan ketuk - untuk mengurangi 1 pack produk</li>
       <li>-jika selesai pesan gulir sampai ke keranjang belanja dan pastikan untuk cek pesanan kalau ada produk yang gk jadi dipesan klik tombol X maka pesanan dihapus</li>
