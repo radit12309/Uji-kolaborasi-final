@@ -42,6 +42,26 @@
       * {
       overflow-wrap: break-word;
        }
+      .footer {
+  background-color: #4da6ff; /* biru lebih terang */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  color: #e6f2ff;
+}
+.footer a:active {
+  transform: scale(0.95);
+}
     </style>
  </head>
 
@@ -722,4 +742,16 @@ updateCounter();
 
 // Sync antar tab
 window.addEventListener("storage", updateCounter);
+</script>
+<footer class="footer">
+  <p>📍 Alamat Toko:</p>
+  <a id="alamat-link" href="#" target="_blank">
+    Klik untuk lihat lokasi di Google Maps
+  </a>
+</footer>
+<script>
+  const alamat = "R9JC+JGH Sumberagung, Kabupaten Jember, Jawa Timur"; 
+  const link = "https://www.google.com/maps?q=" + encodeURIComponent(alamat);
+
+  document.getElementById("alamat-link").href = link;
 </script>
