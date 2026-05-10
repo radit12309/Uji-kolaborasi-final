@@ -112,10 +112,10 @@
 </div>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Kertas & Media</span>
-<h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">Paperline A4 80gsm</h3>
+<h3 class="text-xl font-headline font-bold text-primary mb-6">Paperline A4 80gsm</h3>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga Per Rim</p>
-<div class="flex justify-between items-end">
+<div class="flex justify-between items-center">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 55.000</p>
 <div class="flex items-center gap-2 mt-3">
 <button onclick="remove('Paperline A4 80gsm')" 
