@@ -637,6 +637,14 @@ function remove(nama){
   render();
 }
 
+// ❌ HAPUS LANGSUNG 1 PRODUK
+function removeItem(nama){
+  if(cart[nama]){
+    delete cart[nama];
+  }
+  render();
+}
+
 function render(){
   let isi="";
   let total=0;
@@ -646,7 +654,7 @@ function render(){
     total+=sub;
 
     isi+=`${i} x${cart[i].qty} = Rp ${sub}
-    <button onclick="remove('${i}')">❌</button><br>`;
+    <button onclick="removeItem('${i}')">❌</button><br>`;
   }
 
   document.getElementById("cartItems").innerHTML = isi || "Kosong";
@@ -654,6 +662,13 @@ function render(){
 }
 
 function checkout(){
+
+  // ❌ CEK KERANJANG KOSONG
+  if(Object.keys(cart).length === 0){
+    alert("Keranjang masih kosong!");
+    return;
+  }
+
   let pesan="Halo, saya ingin beli:\n";
   let total=0;
 
