@@ -582,28 +582,6 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
   </button>
 </div>
 
-<!-- About Section -->
-<section class="py-40 bg-surface-container-low relative overflow-hidden" id="about">
-<div class="absolute -right-2
- 0 top-0 opacity-[0.03] select-none pointer-events-none relative mt-20 p-6 bg-white border rounded-lg shadow grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-<span class="material-symbols-outlined text-[60rem]">history_edu</span>
-</div>
-<div class="max-w-7xl mx-auto px-8 relative z-10">
-<div class="grid lg:grid-cols-2 gap-32 items-center">
-<div class="relative">
-<div class="absolute -top-10 -left-10 w-40 h-40 border-t-2 border-l-2 border-gold/20"></div>
-<span class="text-secondary font-body text-xs font-bold tracking-[0.3em] uppercase mb-6 block lg:ml-auto w-full lg:w-[500px]">Our Legacy</span>
-<h2 class="text-6xl font-headline font-extrabold text-primary leading-[1.1] mb-10">Presisi dalam <br/><span class="serif-italic">Setiap Goresan.</span></h2>
-<div class="space-y-8 text-xl font-light text-on-surface-variant leading-relaxed">
-<p>Kami percaya bahwa alat tulis kantor bukan sekadar pelengkap, melainkan instrumen esensial yang menjembatani ide dan realitas. Di <span class="text-primary font-bold">ATK Sejahtera</span>, kami mengkurasi setiap produk dengan standar akurasi tinggi.</p>
-<p>Sejak tahun 2010, kami telah menjadi mitra terpercaya bagi ribuan profesional dan korporasi dalam menyediakan solusi ATK yang efisien, cepat, dan berkualitas unggul.</p>
-</div>
-<div class="mt-16 flex gap-16">
-<div>
-<p class="text-5xl font-headline font-extrabold text-gold tracking-tighter">99<span class="text-3xl">%</span></p>
-<p class="text-xs font-body tracking-widest text-slate-500 uppercase font-bold mt-2">Kepuasan Klien</p>
-</div>
-<div>
 <p class="text-5xl font-headline font-extrabold text-gold tracking-tighter">24<span class="text-3xl text-gold/60">hr</span></p>
 <p class="text-xs font-body tracking-widest text-slate-500 uppercase font-bold mt-2">Layanan Ekspres</p>
 </div>
