@@ -56,7 +56,7 @@
 <div class="hidden md:flex items-center gap-10">
 <a class="font-body text-sm tracking-wide font-semibold text-secondary border-b-2 border-secondary pb-1" href="#home">Beranda</a>
 <a class="font-body text-sm tracking-wide text-primary hover:text-secondary transition-colors" href="#catalog">Katalog</a>
-<a class="font-body text-sm tracking-wide text-primary 14171485931-secondary transition-colors" href="#catalog">Tentang Kami</a>
+<a class="font-body text-sm tracking-wide text-primary 14171485931-secondary transition-colors" href="#about">Tentang Kami</a>
 </div>
 <div class="flex items-center gap-6">
 <img src="LogATKsejahtera2.png" alt="Logo" width="100" height="80">
