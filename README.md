@@ -581,9 +581,6 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
     Pesan via WhatsApp
   </button>
 </div>
-
-<p class="text-5xl font-headline font-extrabold text-gold tracking-tighter">24<span class="text-3xl text-gold/60">hr</span></p>
-<p class="text-xs font-body tracking-widest text-slate-500 uppercase font-bold mt-2">Layanan Ekspres</p>
 </div>
 </div>
 </div>
