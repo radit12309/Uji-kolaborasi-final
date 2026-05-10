@@ -140,6 +140,7 @@
 <div class="flex items-center gap-2 mt-3">
 <button onclick="remove('Paperline A4 80gsm')" 
 class="px-3 py-1 bg-red-500 text-white rounded">-</button>
+ <span id="qty-papperline_A4">0</span>
 <button onclick="add('Paperline A4 80gsm',55000)" 
 class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
@@ -188,8 +189,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 15.000</p>
 <button onclick="remove(' stapler Joyko HD-10')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
-
+<span id="qty-stapler_Joyko_HD10">0</span>
   <button onclick="add('stapler Joyko HD-10',15000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 
