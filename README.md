@@ -165,8 +165,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <button onclick="remove('isi stapler Joyko HD-10')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
 <span id="qty-isi_stapler_Joyko_HD10">0</span>
- 
-  <button onclick="add('isi stapler Joyko HD-10',23000)" 
+ <button onclick="add('isi stapler Joyko HD-10',23000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
   
 </div>
