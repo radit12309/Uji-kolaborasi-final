@@ -148,7 +148,7 @@
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 55.000</p>
 <button onclick="remove('kertas papperline A4')" class="px-3 py-1 bg-red-500 text-white rounded">-</button>
 <span id="qty-kertas_papperline_A4">0</span>
-<button onclick="add('kertas papperline A4',55000)" class="btn-beli px-3 py-1 bg-green-500 text-white rounded">+</button>
+<button onclick="add('kertas papperline A4',55000)" class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
 </div>
