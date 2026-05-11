@@ -163,6 +163,7 @@
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Penjilidan & Peralatan</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow"> isi Joyko HD-10 Stapler</h3>
+<p class="stok text-sm font-body font-semibold mb-2"></p>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per pack(20 kotak kecil)</p>
 <div class="flex justify-between items-end">
@@ -170,7 +171,7 @@
 <button onclick="remove('isi stapler Joyko HD-10')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
 <span id="qty-isi_stapler_Joyko_HD10">0</span>
-  <button onclick="add('isi stapler Joyko HD-10',15000)" 
+<button onclick="add('isi stapler Joyko HD-10',15000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 
 </div>
@@ -187,7 +188,8 @@
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Penjilidan & Peralatan</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">Joyko HD-10 Stapler</h3>
-<div class="flex flex-col gap-4">
+<p class="stok text-sm font-body font-semibold mb-2"></p>
+ <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga Satuan</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 15.000</p>
@@ -212,16 +214,15 @@
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Alat tulis</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">Snowman Board Marker</h3>
-
+<p class="stok text-sm font-body font-semibold mb-2"></p>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga Per pack(12 pcs)</p>
 
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 80.000</p>
-
 <button onclick="remove('Snowman Board Marker')" 
 class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
+<span id="qty-kertas_papperline_A4">0</span>
 <button onclick="add('Snowman Board Marker',80000)" 
 class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 
@@ -239,15 +240,15 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Peralatan</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">Highlighter Joyko</h3>
+<p class="stok text-sm font-body font-semibold mb-2"></p>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per pack(10 pcs)</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 25.000</p>
   <button onclick="remove('Highlighter Joyko')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
-
-  <button onclick="add('Highlighter Joyko',25000)" 
+<span id="qty-kertas_papperline_A4">0</span>
+<button onclick="add('Highlighter Joyko',25000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 
 </div>
@@ -264,15 +265,15 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Alat Tulis</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">Pulpen Standar AE7</h3>
-<div class="flex flex-col gap-4">
+<p class="stok text-sm font-body font-semibold mb-2"></p>
+ <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga Per pack(12 pcs)</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 23.000</p>
 <button onclick="remove('Pulpen Standar AE7')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
-
-  <button onclick="add('Pulpen Standar AE7',23000)" 
+<span id="qty-kertas_papperline_A4">0</span>
+ <button onclick="add('Pulpen Standar AE7',23000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
@@ -288,15 +289,15 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Alat tulis</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">Pilot BP-S,pulpen tinta halus</h3>
+ <p class="stok text-sm font-body font-semibold mb-2"></p>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga Per pack(12 pcs)</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 20.000</p>
 <button onclick="remove('Pilot BP-S,pulpen tinta halus')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
-
-  <button onclick="add('Pilot BP-S,pulpen tinta halus',20000)" 
+<span id="qty-kertas_papperline_A4">0</span>
+<button onclick="add('Pilot BP-S,pulpen tinta halus',20000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>  
 </div>
 </div>
@@ -312,15 +313,15 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Kertas & media</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">Buku sidu (isi 38 lembar)</h3>
+ <p class="stok text-sm font-body font-semibold mb-2"></p>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per pack(12 pcs)</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 35.000</p>
 <button onclick="remove('Buku sidu (isi 38 lembar)')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
-
-  <button onclick="add('Buku sidu (isi 38 lembar)',35000)" 
+<span id="qty-kertas_papperline_A4">0</span>
+<button onclick="add('Buku sidu (isi 38 lembar)',35000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
@@ -336,15 +337,15 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Kertas & Media</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">Post-it 3M 654 (73x73mm),catatan tempel </h3>
+ <p class="stok text-sm font-body font-semibold mb-2"></p>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per pack(100 lembar)</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 16.000</p>
 <button onclick="remove('Post-it 3M 654 (73x73mm),catatan tempel')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
-
-  <button onclick="add('Post-it 3M 654 (73x73mm),catatan tempel',16000)" 
+<span id="qty-kertas_papperline_A4">0</span>
+<button onclick="add('Post-it 3M 654 (73x73mm),catatan tempel',16000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
@@ -360,15 +361,15 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Kertas & media</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">Amplop coklat F4</h3>
+<p class="stok text-sm font-body font-semibold mb-2"></p>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per pack(isi 100 lembar)</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 45.000</p>
 <button onclick="remove('Amplop coklat F4')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
-
-  <button onclick="add('Amplop coklat F4',45000)" 
+<span id="qty-kertas_papperline_A4">0</span>
+ <button onclick="add('Amplop coklat F4',45000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
@@ -384,15 +385,15 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Penjilidan dan peralatan</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">Binder clip Kenko</h3>
+<p class="stok text-sm font-body font-semibold mb-2"></p>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per pack(12 pcs)</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 6.000</p>
 <button onclick="remove('Binder clip Kenko')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
-
-  <button onclick="add('Binder clip Kenko',6000)" 
+<span id="qty-kertas_papperline_A4">0</span>
+<button onclick="add('Binder clip Kenko',6000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
@@ -408,15 +409,15 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Penjilidan & Peralatan</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">Penjepit Kertas</h3>
+ <p class="stok text-sm font-body font-semibold mb-2"></p>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per box(100 pcs)</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 14.000</p>
 <button onclick="remove('Penjepit Kertas')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
-
-  <button onclick="add('Penjepit Kertas',14000)" 
+<span id="qty-kertas_papperline_A4">0</span>
+<button onclick="add('Penjepit Kertas',14000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
@@ -432,15 +433,15 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Penjilidan & Peralatan</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">Map snelhecter arsip dengan penjepit</h3>
+ <p class="stok text-sm font-body font-semibold mb-2"></p>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per pack</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 150.000</p>
 <button onclick="remove('Map snelhecter arsip dengan penjepit')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
-
-  <button onclick="add('Map snelhecter arsip dengan penjepit',150000)" 
+<span id="qty-kertas_papperline_A4">0</span>
+<button onclick="add('Map snelhecter arsip dengan penjepit',150000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
@@ -456,15 +457,15 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Penjilidan dan peralatan</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">Ordner/Binder Bantex </h3>
+<p class="stok text-sm font-body font-semibold mb-2"></p>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per pack(15 pcs)</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 550.000</p>
 <button onclick="remove('Ordner/Binder Bantex')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
-
-  <button onclick="add('Ordner/Binder Bantex',550000)" 
+<span id="qty-kertas_papperline_A4">0</span>
+<button onclick="add('Ordner/Binder Bantex',550000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
@@ -480,15 +481,15 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Peralatan</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">Gunting Joyko(sc-828)</h3>
+<p class="stok text-sm font-body font-semibold mb-2"></p>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per pack(12 pcs)</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 55.000</p>
 <button onclick="remove('Gunting Joyko(sc-828)')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
-
-  <button onclick="add('Gunting Joyko(sc-828)',55000)" 
+<span id="qty-kertas_papperline_A4">0</span>
+<button onclick="add('Gunting Joyko(sc-828)',55000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
@@ -504,15 +505,15 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Peralatan</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">cutter kenko</h3>
+ <p class="stok text-sm font-body font-semibold mb-2"></p>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per pack( 1 pcs)</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 20.000</p>
 <button onclick="remove('cutter kenko')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
-
-  <button onclick="add('cutter kenko',20000)" 
+<span id="qty-kertas_papperline_A4">0</span>
+<button onclick="add('cutter kenko',20000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
@@ -528,15 +529,15 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Peralatan</span>
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">isi cutter kenko</h3>
+ <p class="stok text-sm font-body font-semibold mb-2"></p>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per tube kecil(5 pcs)</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 10.000</p>
 <button onclick="remove('isi cutter kenko')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-
-
-  <button onclick="add('isi cutter kenko',10000)" 
+<span id="qty-kertas_papperline_A4">0</span>
+<button onclick="add('isi cutter kenko',10000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
@@ -554,7 +555,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <div class="p-8 flex flex-col flex-grow">  
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Peralatan</span>  
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">Lakban daimaru/nachi</h3>  
-
+<p class="stok text-sm font-body font-semibold mb-2"></p>
 <div class="flex flex-col gap-4">  
 <p class="text-sm font-body font-medium text-slate-400">Paket 6 roll</p>  
 
@@ -563,7 +564,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 
 <button onclick="remove('Paket 6 roll')"   
 class="px-3 py-1 bg-red-500 text-white rounded">-</button>  
-
+<span id="qty-kertas_papperline_A4">0</span>
 <button onclick="add('Paket 6 roll',50000)"   
 class="px-3 py-1 bg-green-500 text-white rounded">+</button>  
 </div>  
