@@ -134,52 +134,46 @@
     />
 
     <!-- Overlay -->
-    <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center" id="catalog">
+  <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center" id="catalog">
     </div>
   </div>
 
   <!-- CONTENT -->
   <div class="p-4 sm:p-6 md:p-8 flex flex-col flex-grow">
 
-    <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">
+  <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">
       Kertas & Media
     </span>
 
-    <h3 class="text-lg sm:text-xl font-headline font-bold text-primary mb-4 sm:mb-6">
+ <h3 class="text-lg sm:text-xl font-headline font-bold text-primary mb-4 sm:mb-6">
       Paperline A4 80gsm
     </h3>
 
-    <div class="flex flex-col gap-3 sm:gap-4">
+<div class="flex flex-col gap-3 sm:gap-4">
 
-      <p class="text-xs sm:text-sm font-body font-medium text-slate-400">
+ <p class="text-xs sm:text-sm font-body font-medium text-slate-400">
         Harga Per Rim
       </p>
 
       <!-- PRICE + BUTTON -->
-      <div class="flex flex-col gap-3">
+  <div class="flex flex-col gap-3">
 
-        <p class="text-xl sm:text-2xl font-headline font-extrabold text-primary">
+   <p class="text-xl sm:text-2xl font-headline font-extrabold text-primary">
           Rp 55.000
         </p>
 
-        <div class="flex items-center gap-2">
-          <button 
+  <div class="flex items-center gap-2">
+    
+   <button 
             onclick="remove('Paperline A4 80gsm')" 
-            class="px-3 py-1 bg-red-500 text-white rounded active:scale-95 transition"
-          >
-            -
-          </button>
+            class="px-3 py-1 bg-red-500 text-white rounded active:scale-95 transition">-</button>
 
-          <span id="qty-Paperline_A4_80gsm" class="min-w-[20px] text-center">
-            0
-          </span>
+  <span id="qty-Paperline_A4_80gsm" class="min-w-[20px] text-center">0</span>
 
-          <button 
+<button 
             onclick="add('Paperline A4 80gsm',55000)" 
-            class="px-3 py-1 bg-green-500 text-white rounded active:scale-95 transition"
-          >
-            +
-        </button>
+            class="px-3 py-1 bg-green-500 text-white rounded active:scale-95 transition">
++</button>
   </div>
 </div>
 </div>
