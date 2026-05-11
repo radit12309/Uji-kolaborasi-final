@@ -736,7 +736,7 @@ function initStok() {
 
   daftarProduk.forEach(nama => {
     if (!stok[nama] && stok[nama] !== 0) {
-      stok[nama] = Math.floor(Math.random() * 20) + 10; // 10–30
+      stok[nama] = Math.floor(Math.random() * 100) + 10; // 100
     }
   });
 
