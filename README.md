@@ -49,6 +49,17 @@
   padding: 15px;
   margin-top: 20px;
 }
+.badge-habis {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: none;
+  font-weight: bold;
 
 .footer a {
   color: #ffffff;
@@ -121,25 +132,23 @@
 <!-- Product Grid -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm font-body font-medium text-black">
 <!-- Product Card 1 -->
-<div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
+ <div class="product-card group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
+<span class="badge-habis">Habis</span>
 <img alt="Joyko" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="kertas.jpg"/>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-</div>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"></div>
 </div>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">kertas & media</span>
-<h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow"> kertas papperline A4</h3>
+<h3 class="nama-produk text-xl font-headline font-bold text-primary mb-6 flex-grow">kertas papperline A4</h3>
+<p class="stok text-sm font-body font-semibold mb-2"></p>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per rim</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 55.000</p>
-<button onclick="remove('kertas papperline A4')" 
-    class="px-3 py-1 bg-red-500 text-white rounded">-</button>
+<button onclick="remove('kertas papperline A4')" class="px-3 py-1 bg-red-500 text-white rounded">-</button>
 <span id="qty-kertas_papperline_A4">0</span>
-  <button onclick="add('kertas papperline A4',55000)" 
-    class="px-3 py-1 bg-green-500 text-white rounded">+</button>
-
+<button onclick="add('kertas papperline A4',55000)" class="btn-beli px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
 </div>
@@ -700,6 +709,103 @@ function checkout(){
     "https://wa.me/6285655504887?text=" + encodeURIComponent(pesan)
   );
 }
+</script>
+<script>
+// ========================
+// AMBIL PRODUK DARI HTML
+// ========================
+function ambilProdukDariHTML() {
+  const produk = [];
+
+  document.querySelectorAll(".product-card").forEach(card => {
+    const nama = card.querySelector(".nama-produk")?.innerText.trim();
+
+    if (nama) produk.push(nama);
+  });
+
+  return produk;
+}
+
+// ========================
+// INIT STOK OTOMATIS
+// ========================
+function initStok() {
+  let stok = JSON.parse(localStorage.getItem("stokATK")) || {};
+
+  const daftarProduk = ambilProdukDariHTML();
+
+  daftarProduk.forEach(nama => {
+    if (!stok[nama] && stok[nama] !== 0) {
+      stok[nama] = Math.floor(Math.random() * 20) + 10; // 10–30
+    }
+  });
+
+  localStorage.setItem("stokATK", JSON.stringify(stok));
+}
+
+// ========================
+// RENDER STOK + BADGE
+// ========================
+function renderStok() {
+  const stok = JSON.parse(localStorage.getItem("stokATK"));
+
+  document.querySelectorAll(".product-card").forEach(card => {
+    const nama = card.querySelector(".nama-produk")?.innerText.trim();
+    const elStok = card.querySelector(".stok");
+    const badge = card.querySelector(".badge-habis");
+    const btn = card.querySelector(".btn-beli");
+
+    if (stok[nama] !== undefined) {
+      elStok.innerText = "Stok: " + stok[nama];
+
+      // warna stok
+      elStok.style.color = stok[nama] <= 5 && stok[nama] > 0 ? "orange" : "black";
+
+      if (stok[nama] === 0) {
+        // HABIS
+        badge.style.display = "block";
+        btn.disabled = true;
+        btn.innerText = "Habis";
+        btn.style.opacity = "0.5";
+      } else {
+        // MASIH ADA
+        badge.style.display = "none";
+        btn.disabled = false;
+        btn.innerText = "Beli";
+        btn.style.opacity = "1";
+      }
+    }
+  });
+}
+
+// ========================
+// EVENT BELI
+// ========================
+function initEventBeli() {
+  document.querySelectorAll(".product-card").forEach(card => {
+    const nama = card.querySelector(".nama-produk")?.innerText.trim();
+    const btn = card.querySelector(".btn-beli");
+
+    btn.addEventListener("click", () => {
+      let stok = JSON.parse(localStorage.getItem("stokATK"));
+
+      if (stok[nama] > 0) {
+        stok[nama]--;
+        localStorage.setItem("stokATK", JSON.stringify(stok));
+        renderStok();
+      } else {
+        alert("Stok habis!");
+      }
+    });
+  });
+}
+
+// ========================
+// INIT SEMUA
+// ========================
+initStok();
+renderStok();
+initEventBeli();
 </script>
 <h1>Pengunjung: <span id="counter">0</span></h1>
 
