@@ -222,7 +222,7 @@
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 80.000</p>
 <button onclick="remove('Snowman Board Marker')" 
 class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-kertas_papperline_A4">0</span>
+<span id="qty-Snowman_Board_Marker">0</span>
 <button onclick="add('Snowman Board Marker',80000)" 
 class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 
@@ -247,7 +247,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 25.000</p>
   <button onclick="remove('Highlighter Joyko')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-kertas_papperline_A4">0</span>
+<span id="Highlighter_Joyko">0</span>
 <button onclick="add('Highlighter Joyko',25000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 
@@ -272,7 +272,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 23.000</p>
 <button onclick="remove('Pulpen Standar AE7')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-kertas_papperline_A4">0</span>
+<span id="qty-Pulpen_Standar_AE7">0</span>
  <button onclick="add('Pulpen Standar AE7',23000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
@@ -294,10 +294,10 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-sm font-body font-medium text-slate-400">Harga Per pack(12 pcs)</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 20.000</p>
-<button onclick="remove('Pilot BP-S,pulpen tinta halus')" 
+<button onclick="remove('Pilot BP-S pulpen tinta halus')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-kertas_papperline_A4">0</span>
-<button onclick="add('Pilot BP-S,pulpen tinta halus',20000)" 
+<span id="qty-Pilot_BP-S_pulpen_tinta_halus">0</span>
+<button onclick="add('Pilot BP-S pulpen tinta halus',20000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>  
 </div>
 </div>
@@ -320,7 +320,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 35.000</p>
 <button onclick="remove('Buku sidu (isi 38 lembar)')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-kertas_papperline_A4">0</span>
+<span id="qty-Buku_sidu_(isi_38_lembar)">0</span>
 <button onclick="add('Buku sidu (isi 38 lembar)',35000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
@@ -342,10 +342,10 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-sm font-body font-medium text-slate-400">Harga per pack(100 lembar)</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 16.000</p>
-<button onclick="remove('Post-it 3M 654 (73x73mm),catatan tempel')" 
+<button onclick="remove('Post-it 3M 654 (73x73mm) catatan tempel')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-kertas_papperline_A4">0</span>
-<button onclick="add('Post-it 3M 654 (73x73mm),catatan tempel',16000)" 
+<span id="qty-Post-it_3M_654_(73x73mm)_catatan_tempel">0</span>
+<button onclick="add('Post-it 3M 654 (73x73mm) catatan tempel',16000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
@@ -368,7 +368,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 45.000</p>
 <button onclick="remove('Amplop coklat F4')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-kertas_papperline_A4">0</span>
+<span id="qty-Amplop_coklat_F4">0</span>
  <button onclick="add('Amplop coklat F4',45000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
@@ -392,7 +392,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 6.000</p>
 <button onclick="remove('Binder clip Kenko')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-kertas_papperline_A4">0</span>
+<span id="qty-Binder_clip_Kenko">0</span>
 <button onclick="add('Binder clip Kenko',6000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
@@ -416,7 +416,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 14.000</p>
 <button onclick="remove('Penjepit Kertas')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-kertas_papperline_A4">0</span>
+<span id="qty-Penjepit_Kertas">0</span>
 <button onclick="add('Penjepit Kertas',14000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
@@ -440,7 +440,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 150.000</p>
 <button onclick="remove('Map snelhecter arsip dengan penjepit')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-kertas_papperline_A4">0</span>
+<span id="qty-Map_snelhecter_arsip_dengan_penjepit">0</span>
 <button onclick="add('Map snelhecter arsip dengan penjepit',150000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
@@ -464,7 +464,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 550.000</p>
 <button onclick="remove('Ordner/Binder Bantex')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-kertas_papperline_A4">0</span>
+<span id="qty-Ordner/Binder_Bantex">0</span>
 <button onclick="add('Ordner/Binder Bantex',550000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
@@ -488,7 +488,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 55.000</p>
 <button onclick="remove('Gunting Joyko(sc-828)')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-kertas_papperline_A4">0</span>
+<span id="qty-Gunting_Joyko(sc-828)">0</span>
 <button onclick="add('Gunting Joyko(sc-828)',55000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
@@ -512,7 +512,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 20.000</p>
 <button onclick="remove('cutter kenko')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-kertas_papperline_A4">0</span>
+<span id="qty-cutter_kenko">0</span>
 <button onclick="add('cutter kenko',20000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
@@ -536,7 +536,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 10.000</p>
 <button onclick="remove('isi cutter kenko')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-kertas_papperline_A4">0</span>
+<span id="qty-isi_cutter_kenko">0</span>
 <button onclick="add('isi cutter kenko',10000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
@@ -564,7 +564,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 
 <button onclick="remove('Paket 6 roll')"   
 class="px-3 py-1 bg-red-500 text-white rounded">-</button>  
-<span id="qty-kertas_papperline_A4">0</span>
+<span id="qty-Paket_6_roll">0</span>
 <button onclick="add('Paket 6 roll',50000)"   
 class="px-3 py-1 bg-green-500 text-white rounded">+</button>  
 </div>  
