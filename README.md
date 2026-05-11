@@ -76,7 +76,6 @@
 <div class="hidden md:flex items-center gap-10">
 <a class="font-body text-sm tracking-wide font-semibold text-secondary border-b-2 border-secondary pb-1" href="#home">Beranda</a>
 <a class="font-body text-sm tracking-wide text-primary hover:text-secondary transition-colors" href="#catalog">Katalog</a>
-<a class="font-body text-sm tracking-wide text-primary 14171485931-secondary transition-colors" href="#about">Tentang Kami</a>
 </div>
 <div class="flex items-center gap-6">
 <img src="LogATKsejahtera2.png" alt="Logo" width="100" height="80">
@@ -135,12 +134,12 @@
 <h3 class="text-xl font-headline font-bold text-primary mb-6">Paperline A4 80gsm</h3>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga Per Rim</p>
-<div class="flex justify-between items-center">
+<div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 55.000</p>
-<div class="flex items-center gap-2 mt-3">
+<div class="flex items-center justify-between items-end">
 <button onclick="remove('Paperline A4 80gsm')" 
 class="px-3 py-1 bg-red-500 text-white rounded">-</button>
- <span id="qty-Papperline_A4_80gsm">0</span>
+ <span id="qty-Paperline_A4_80gsm">0</span>
 <button onclick="add('Paperline A4 80gsm',55000)" 
 class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
