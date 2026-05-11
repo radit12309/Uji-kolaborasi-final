@@ -123,82 +123,26 @@
 <!-- Product Grid -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm font-body font-medium text-black">
 <!-- Product Card 1 -->
-<div class="group flex flex-col bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500 rounded-xl overflow-hidden min-w-[260px] max-w-sm w-full mx-auto">
-
-  <!-- IMAGE -->
-  <div class="aspect-[4/5] sm:aspect-[3/4] bg-surface-container overflow-hidden relative">
-    <img 
-      alt="Paperline" 
-      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-      src="kertas.jpg"
-    />
-
-    <!-- Overlay -->
-  <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center" id="catalog">
-    </div>
-  </div>
-
-  <!-- CONTENT -->
-  <div class="p-4 sm:p-6 md:p-8 flex flex-col flex-grow">
-
-  <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">
-      Kertas & Media
-    </span>
-
- <h3 class="text-lg sm:text-xl font-headline font-bold text-primary mb-4 sm:mb-6">
-      Paperline A4 80gsm
-    </h3>
-
-<div class="flex flex-col gap-3 sm:gap-4">
-
- <p class="text-xs sm:text-sm font-body font-medium text-slate-400">
-        Harga Per Rim
-      </p>
-
-      <!-- PRICE + BUTTON -->
-  <div class="flex flex-col gap-3">
-
-   <p class="text-xl sm:text-2xl font-headline font-extrabold text-primary">
-          Rp 55.000
-        </p>
-
-  <div class="flex items-center gap-2">
-    
-   <button 
-            onclick="remove('Paperline A4 80gsm')" 
-            class="px-3 py-1 bg-red-500 text-white rounded active:scale-95 transition">-</button>
-
-  <span id="qty-Paperline_A4_80gsm" class="min-w-[20px] text-center">0</span>
-
-<button 
-            onclick="add('Paperline A4 80gsm',55000)" 
-            class="px-3 py-1 bg-green-500 text-white rounded active:scale-95 transition">
-+</button>
-  </div>
-</div>
-</div>
-</div>
-</div>
-    <!-- Product Card 2 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Isistapler.jpg"/>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<img alt="Paperline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="kertas.jpg"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"  id="catalog">
 </div>
 </div>
 <div class="p-8 flex flex-col flex-grow">
-<span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">penjilidan & peralatan</span>
-<h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow">isi stapler Joyko HD-10</h3>
+<span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Kertas & Media</span>
+<h3 class="text-xl font-headline font-bold text-primary mb-6">Paperline A4 80gsm</h3>
 <div class="flex flex-col gap-4">
-<p class="text-sm font-body font-medium text-slate-400">Harga Per paket(20 kotak kecil)</p>
-<div class="flex justify-between items-end">
-<p class="text-2xl font-headline font-extrabold text-primary">Rp 23.000</p>
-<button onclick="remove('isi stapler Joyko HD-10')" 
-    class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-isi_stapler_Joyko_HD10">0</span>
- <button onclick="add('isi stapler Joyko HD-10',23000)" 
-    class="px-3 py-1 bg-green-500 text-white rounded">+</button>
-  
+<p class="text-sm font-body font-medium text-slate-400">Harga Per Rim</p>
+<div class="flex items-center gap-2">
+<p class="text-2xl font-headline font-extrabold text-primary">Rp 55.000</p>
+<div class="flex items-center justify-between items-end">
+<button onclick="remove('Paperline A4 80gsm')" 
+class="px-3 py-1 bg-red-500 text-white rounded">-</button>
+ <span id="qty-Paperline_A4_80gsm">0</span>
+<button onclick="add('Paperline A4 80gsm',55000)" 
+class="px-3 py-1 bg-green-500 text-white rounded">+</button>
+</div>
 </div>
 </div>
 </div>
