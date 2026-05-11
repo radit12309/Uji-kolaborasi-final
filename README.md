@@ -148,7 +148,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
    <!-- Product Card 2 -->
 <div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
-<img alt="Joyko" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="isistapler.jpg"/>
+<img alt="Joyko" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Isistapler.jpg"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 </div>
 </div>
