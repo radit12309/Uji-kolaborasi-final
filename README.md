@@ -117,8 +117,6 @@
 <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
 </div>
 </div>
-</div>
-</header>
 
 <!-- Product Grid -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm font-body font-medium text-black">
