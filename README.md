@@ -154,26 +154,32 @@
 </div>
 </div>
    <!-- Product Card 2 -->
-<div class="group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
+<div class="product-card group flex flex-col h-full bg-white border border-primary/5 hover:border-gold/30 transition-all duration-500">
 <div class="aspect-[4/5] bg-surface-container overflow-hidden relative">
 <span class="badge-habis">Habis</span>
 <img alt="Joyko" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Isistapler.jpg"/>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-</div>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"></div>
 </div>
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Penjilidan & Peralatan</span>
-<h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow"> isi Joyko HD-10 Stapler</h3>
-<p class="stok text-sm font-body font-semibold mb-2"></p>
+
+<h3 class="nama-produk text-xl font-headline font-bold text-primary mb-4 flex-grow">isi stapler Joyko HD-10</h3>
+
+<p class="stok text-sm font-body font-semibold mb-1"></p>
+
+<p class="penjualan text-xs font-body text-slate-500 mb-3">Terjual: <span class="jumlah-terjual">0</span></p>
+
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per pack(20 kotak kecil)</p>
+
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 23.000</p>
-<button onclick="remove('isi stapler Joyko HD-10')" 
-    class="px-3 py-1 bg-red-500 text-white rounded">-</button>
+
+<button onclick="remove('isi stapler Joyko HD-10')" class="px-3 py-1 bg-red-500 text-white rounded">-</button>
+
 <span id="qty-isi_stapler_Joyko_HD10">0</span>
-<button onclick="add('isi stapler Joyko HD-10',15000)" 
-    class="px-3 py-1 bg-green-500 text-white rounded">+</button>
+
+<button onclick="add('isi stapler Joyko HD-10',23000)" class="btn-beli px-3 py-1 bg-green-500 text-white rounded">+</button>
 
 </div>
 </div>
