@@ -247,7 +247,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 25.000</p>
   <button onclick="remove('Highlighter Joyko')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="Highlighter_Joyko">0</span>
+<span id="qty-Highlighter_Joyko">0</span>
 <button onclick="add('Highlighter Joyko',25000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 
@@ -318,10 +318,10 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-sm font-body font-medium text-slate-400">Harga per pack(12 pcs)</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 35.000</p>
-<button onclick="remove('Buku sidu (isi 38 lembar)')" 
+<button onclick="remove('Buku sidu (isi l38lembar)')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-Buku_sidu_(isi_38_lembar)">0</span>
-<button onclick="add('Buku sidu (isi 38 lembar)',35000)" 
+<span id="qty-Buku_sidu_(isi38lembar)">0</span>
+<button onclick="add('Buku sidu (isi38lembar)',35000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
@@ -342,10 +342,10 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-sm font-body font-medium text-slate-400">Harga per pack(100 lembar)</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 16.000</p>
-<button onclick="remove('Post-it 3M 654 (73x73mm) catatan tempel')" 
+<button onclick="remove('Post-it 3M 654 73x73mm catatan tempel')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-Post-it_3M_654_(73x73mm)_catatan_tempel">0</span>
-<button onclick="add('Post-it 3M 654 (73x73mm) catatan tempel',16000)" 
+<span id="qty-Post-it_3M_654_73x73mm_catatan_tempel">0</span>
+<button onclick="add('Post-it 3M 654 73x73mm catatan tempel',16000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
@@ -488,8 +488,8 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 55.000</p>
 <button onclick="remove('Gunting Joyko(sc-828)')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
-<span id="qty-Gunting_Joyko(sc-828)">0</span>
-<button onclick="add('Gunting Joyko(sc-828)',55000)" 
+<span id="qty-Gunting_Joyko_sc-828">0</span>
+<button onclick="add('Gunting Joyko_sc-828',55000)" 
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
