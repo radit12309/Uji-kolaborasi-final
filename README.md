@@ -110,18 +110,6 @@
             </p>
 
 </div>
-  <div style="color:white;">
-    <ul>
-    <il><strong>cara pesan</strong</il>
-      <li>-pilih produk yang diinginkan</li>
-      <li>-ketuk + untuk menambahkan produk 1 pack dan ketuk - untuk mengurangi 1 pack produk</li>
-      <li>-jika selesai pesan gulir sampai ke keranjang belanja dan pastikan untuk cek pesanan kalau ada produk yang gk jadi dipesan klik tombol X maka pesanan dihapus</li>
-    </ul>
-  </div>
-
-  
-  
-  
 <div class="lg:col-span-5">
 <div class="relative rounded-sm overflow-hidden aspect-[3/4] border-[12px] border-white/5 premium-shadow">
 <img alt="Premium Stationery" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNuQijbvAGgDAQym--EphKkSrmcWdEnF8wBgqy_w6fJSpbSvy8tk0St6-33PItEISsC_x8PNKbOpCiOBw3c_tA7NVbDt36dge61kBnLG_Zun5167H6w2qYUUcNhUppyRFaDZ6v8y9qcDntf1dsSxDQR3Cyvhues2lZga7DTfVYceYiZjPTN5STqHwvvp9SLwSRGFTIGEGEK6KGA81t7SaAGjegD8G9siUzuzlg_fdlgdnylhg_nEiP7EyPU-9QSJwjAIcxMevLjK7U"/>
