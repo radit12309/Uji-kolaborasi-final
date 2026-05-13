@@ -140,6 +140,7 @@
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">kertas & media</span>
 <h3 class="nama-produk text-xl font-headline font-bold text-primary mb-6 flex-grow">kertas papperline A4</h3>
+ <span id="qty-kertas_a4">0</span>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per rim</p>
 <div class="flex justify-between items-end">
@@ -833,4 +834,44 @@ window.addEventListener("storage", updateCounter);
   const link = "https://www.google.com/maps?q=" + encodeURIComponent(alamat);
 
   document.getElementById("alamat-link").href = link;
+</script>
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function updateUI(id) {
+  let el = document.getElementById("qty-" + id);
+  if (el) {
+    el.innerText = cart[id] || 0;
+  }
+}
+
+function add(id, price) {
+  if (!cart[id]) cart[id] = 0;
+
+  cart[id] += 1;
+
+  saveCart();
+  updateUI(id);
+}
+
+function remove(id) {
+  if (!cart[id]) return;
+
+  cart[id] -= 1;
+  if (cart[id] < 0) cart[id] = 0;
+
+  saveCart();
+  updateUI(id);
+}
+
+// load semua produk saat halaman dibuka
+window.onload = function () {
+  for (let id in cart) {
+    updateUI(id);
+  }
+};
 </script>
