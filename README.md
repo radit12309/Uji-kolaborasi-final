@@ -128,6 +128,8 @@
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">kertas & media</span>
 <h3 class="nama-produk text-xl font-headline font-bold text-primary mb-6 flex-grow">kertas papperline A4</h3>
+<span id="qty-Kertas_Paperline_A4"></span>
+<span id="terjual-Kertas_Paperline_A4"></span 
  <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per rim</p>
 <div class="flex justify-between items-end">
@@ -605,16 +607,28 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
 <script>
+// =======================
+// CART (SEMENTARA)
+// =======================
 let cart = {};
 
+// =======================
+// LOAD PENJUALAN
+// =======================
+let penjualan = JSON.parse(localStorage.getItem("penjualan")) || {};
+
+// =======================
 // TAMBAH
+// =======================
 function add(nama,harga){
   if(!cart[nama]) cart[nama]={harga:harga,qty:0};
   cart[nama].qty++;
   render();
 }
 
-// KURANG 1
+// =======================
+// KURANG
+// =======================
 function remove(nama){
   if(cart[nama]){
     cart[nama].qty--;
@@ -623,7 +637,9 @@ function remove(nama){
   render();
 }
 
+// =======================
 // HAPUS ITEM
+// =======================
 function removeItem(nama){
   if(cart[nama]){
     delete cart[nama];
@@ -631,7 +647,9 @@ function removeItem(nama){
   render();
 }
 
+// =======================
 // UPDATE QTY DISPLAY
+// =======================
 function updateQtyDisplay(){
   document.querySelectorAll("[id^='qty-']").forEach(el=>{
     el.innerText = 0;
@@ -646,7 +664,22 @@ function updateQtyDisplay(){
   }
 }
 
+// =======================
+// UPDATE TERJUAL UI 🔥
+// =======================
+function updateTerjualUI(){
+  for(let i in penjualan){
+    let safeId = i.replace(/\s/g, "_").replace(/[^a-zA-Z0-9_]/g,"");
+    let el = document.getElementById("terjual-" + safeId);
+    if(el){
+      el.innerText = penjualan[i];
+    }
+  }
+}
+
+// =======================
 // RENDER KERANJANG
+// =======================
 function render(){
   let isi="";
   let total=0;
@@ -665,7 +698,9 @@ function render(){
   updateQtyDisplay();
 }
 
-// CHECKOUT WA + ONGKIR 8.000
+// =======================
+// CHECKOUT + TAMBAH PENJUALAN 🔥🔥🔥
+// =======================
 function checkout(){
 
   if(Object.keys(cart).length === 0){
@@ -679,10 +714,17 @@ function checkout(){
   for(let i in cart){
     let sub = cart[i].harga * cart[i].qty;
     total += sub;
+
+    // 🔥 TAMBAH KE PENJUALAN
+    penjualan[i] = (penjualan[i] || 0) + cart[i].qty;
+
     pesan += `- ${i} x${cart[i].qty} = Rp ${sub}\n`;
   }
 
-  // 🚚 ONGKIR FIX
+  // SIMPAN KE LOCAL STORAGE
+  localStorage.setItem("penjualan", JSON.stringify(penjualan));
+
+  // ONGKIR
   let ongkir = 8000;
   let grandTotal = total + ongkir;
 
@@ -690,107 +732,22 @@ function checkout(){
   pesan += `\nTotal Barang: Rp ${total}`;
   pesan += `\nTotal Bayar: Rp ${grandTotal}`;
 
+  // RESET CART
+  cart = {};
+  render();
+  updateTerjualUI();
+
+  // WA
   window.open(
     "https://wa.me/6285655504887?text=" + encodeURIComponent(pesan)
   );
 }
-</script>
-<script>
-// ========================
-// AMBIL PRODUK DARI HTML
-// ========================
-function ambilProdukDariHTML() {
-  const produk = [];
 
-  document.querySelectorAll(".product-card").forEach(card => {
-    const nama = card.querySelector(".nama-produk")?.innerText.trim();
-
-    if (nama) produk.push(nama);
-  });
-
-  return produk;
-}
-
-// ========================
-// INIT STOK OTOMATIS
-// ========================
-function initStok() {
-  let stok = JSON.parse(localStorage.getItem("stokATK")) || {};
-
-  const daftarProduk = ambilProdukDariHTML();
-
-  daftarProduk.forEach(nama => {
-    if (!stok[nama] && stok[nama] !== 0) {
-      stok[nama] = Math.floor(Math.random() * 100) + 10; // 100
-    }
-  });
-
-  localStorage.setItem("stokATK", JSON.stringify(stok));
-}
-
-// ========================
-// RENDER STOK + BADGE
-// ========================
-function renderStok() {
-  const stok = JSON.parse(localStorage.getItem("stokATK"));
-
-  document.querySelectorAll(".product-card").forEach(card => {
-    const nama = card.querySelector(".nama-produk")?.innerText.trim();
-    const elStok = card.querySelector(".stok");
-    const badge = card.querySelector(".badge-habis");
-    const btn = card.querySelector(".btn-beli");
-
-    if (stok[nama] !== undefined) {
-      elStok.innerText = "Stok: " + stok[nama];
-
-      // warna stok
-      elStok.style.color = stok[nama] <= 5 && stok[nama] > 0 ? "orange" : "black";
-
-      if (stok[nama] === 0) {
-        // HABIS
-        badge.style.display = "block";
-        btn.disabled = true;
-        btn.innerText = "Habis";
-        btn.style.opacity = "0.5";
-      } else {
-        // MASIH ADA
-        badge.style.display = "none";
-        btn.disabled = false;
-        btn.innerText = "Beli";
-        btn.style.opacity = "1";
-      }
-    }
-  });
-}
-
-// ========================
-// EVENT BELI
-// ========================
-function initEventBeli() {
-  document.querySelectorAll(".product-card").forEach(card => {
-    const nama = card.querySelector(".nama-produk")?.innerText.trim();
-    const btn = card.querySelector(".btn-beli");
-
-    btn.addEventListener("click", () => {
-      let stok = JSON.parse(localStorage.getItem("stokATK"));
-
-      if (stok[nama] > 0) {
-        stok[nama]--;
-        localStorage.setItem("stokATK", JSON.stringify(stok));
-        renderStok();
-      } else {
-        alert("Stok habis!");
-      }
-    });
-  });
-}
-
-// ========================
-// INIT SEMUA
-// ========================
-initStok();
-renderStok();
-initEventBeli();
+// =======================
+// INIT SAAT LOAD
+// =======================
+updateTerjualUI();
+render();
 </script>
 <h1>Pengunjung: <span id="counter">0</span></h1>
 
