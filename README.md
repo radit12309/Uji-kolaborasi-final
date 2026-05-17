@@ -128,8 +128,8 @@
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">kertas & media</span>
 <h3 class="nama-produk text-xl font-headline font-bold text-primary mb-6 flex-grow">kertas papperline A4</h3>
-<span id="qty-Kertas_Paperline_A4"></span>
-<span id="terjual-Kertas_Paperline_A4"></span>
+<span id="terjual-Kertas_Paperline_A4">0</span>
+<span id="qty-Kertas_Paperline_A4">0</span>
  <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per rim</p>
 <div class="flex justify-between items-end">
@@ -739,12 +739,155 @@ function checkout(){
 
   // WA
   window.open(
+    "https://wa.me/6285655504887?// =======================
+// HELPER (BIAR ID AMAN)
+// =======================
+function toId(nama){
+  return nama.replace(/\s/g, "_").replace(/[^a-zA-Z0-9_]/g,"");
+}
+
+// =======================
+// DATA
+// =======================
+let cart = {};
+let penjualan = JSON.parse(localStorage.getItem("penjualan")) || {};
+
+// =======================
+// TAMBAH
+// =======================
+function add(nama,harga){
+  if(!cart[nama]) cart[nama]={harga:harga,qty:0};
+  cart[nama].qty++;
+  render();
+}
+
+// =======================
+// KURANG
+// =======================
+function remove(nama){
+  if(cart[nama]){
+    cart[nama].qty--;
+    if(cart[nama].qty<=0) delete cart[nama];
+  }
+  render();
+}
+
+// =======================
+// HAPUS ITEM
+// =======================
+function removeItem(nama){
+  if(cart[nama]){
+    delete cart[nama];
+  }
+  render();
+}
+
+// =======================
+// UPDATE QTY DISPLAY
+// =======================
+function updateQtyDisplay(){
+  document.querySelectorAll("[id^='qty-']").forEach(el=>{
+    el.innerText = 0;
+  });
+
+  for(let i in cart){
+    let safeId = toId(i);
+    let el = document.getElementById("qty-" + safeId);
+    if(el){
+      el.innerText = cart[i].qty;
+    }
+  }
+}
+
+// =======================
+// UPDATE TERJUAL UI
+// =======================
+function updateTerjualUI(){
+  for(let i in penjualan){
+    let safeId = toId(i);
+    let el = document.getElementById("terjual-" + safeId);
+
+    if(el){
+      el.innerText = penjualan[i];
+    } else {
+      console.log("ID tidak ditemukan:", "terjual-" + safeId);
+    }
+  }
+}
+
+// =======================
+// RENDER KERANJANG
+// =======================
+function render(){
+  let isi="";
+  let total=0;
+
+  for(let i in cart){
+    let sub = cart[i].harga * cart[i].qty;
+    total += sub;
+
+    isi += `${i} x${cart[i].qty} = Rp ${sub}
+    <button onclick="removeItem('${i}')">❌</button><br>`;
+  }
+
+  document.getElementById("cartItems").innerHTML = isi || "Kosong";
+  document.getElementById("total").innerText = total;
+
+  updateQtyDisplay();
+}
+
+// =======================
+// CHECKOUT + PENJUALAN
+// =======================
+function checkout(){
+
+  if(Object.keys(cart).length === 0){
+    alert("Keranjang masih kosong!");
+    return;
+  }
+
+  let pesan = "Halo, saya ingin beli:\n";
+  let total = 0;
+
+  console.log("CART:", cart);
+  console.log("PENJUALAN SEBELUM:", penjualan);
+
+  for(let i in cart){
+    let sub = cart[i].harga * cart[i].qty;
+    total += sub;
+
+    // TAMBAH KE PENJUALAN 🔥
+    penjualan[i] = (penjualan[i] || 0) + cart[i].qty;
+
+    pesan += `- ${i} x${cart[i].qty} = Rp ${sub}\n`;
+  }
+
+  console.log("PENJUALAN SESUDAH:", penjualan);
+
+  // SIMPAN
+  localStorage.setItem("penjualan", JSON.stringify(penjualan));
+
+  // ONGKIR
+  let ongkir = 8000;
+  let grandTotal = total + ongkir;
+
+  pesan += `\nOngkir: Rp ${ongkir}`;
+  pesan += `\nTotal Barang: Rp ${total}`;
+  pesan += `\nTotal Bayar: Rp ${grandTotal}`;
+
+  // RESET CART
+  cart = {};
+  render();
+  updateTerjualUI();
+
+  // WA
+  window.open(
     "https://wa.me/6285655504887?text=" + encodeURIComponent(pesan)
   );
 }
 
 // =======================
-// INIT SAAT LOAD
+// INIT
 // =======================
 updateTerjualUI();
 render();
