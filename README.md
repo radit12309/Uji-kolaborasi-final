@@ -129,8 +129,7 @@
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">kertas & media</span>
 <h3 class="nama-produk text-xl font-headline font-bold text-primary mb-6 flex-grow">kertas papperline A4</h3>
 <span id="terjual-Kertas_Paperline_A4">0</span>
-<span id="qty-Kertas_Paperline_A4">0</span>
- <div class="flex flex-col gap-4">
+<div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per rim</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 55.000</p>
