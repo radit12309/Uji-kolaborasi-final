@@ -128,8 +128,7 @@
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">kertas & media</span>
 <h3 class="nama-produk text-xl font-headline font-bold text-primary mb-6 flex-grow">kertas papperline A4</h3>
- <span id="terjual-a4">0</span>
-<div class="flex flex-col gap-4">
+ <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per rim</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 55.000</p>
@@ -150,7 +149,6 @@
 <div class="p-8 flex flex-col flex-grow">  
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">Penjilidan & Peralatan</span>  
 <h3 class="text-xl font-headline font-bold text-primary mb-6 flex-grow"> isi Joyko HD-10 Stapler</h3>
-<span id="terjual-pulpen">0</span> 
 <p class="stok text-sm font-body font-semibold mb-2"></p>  
 <div class="flex flex-col gap-4">  
 <p class="text-sm font-body font-medium text-slate-400">Harga per pack(20 kotak kecil)</p>  
@@ -822,85 +820,5 @@ window.addEventListener("storage", updateCounter);
   const link = "https://www.google.com/maps?q=" + encodeURIComponent(alamat);
 
 document.getElementById("alamat-link").href = link;
- // =======================
-// AMBIL DATA DARI STORAGE
-// =======================
-let penjualan = JSON.parse(localStorage.getItem("penjualan")) || {};
-let cart = JSON.parse(localStorage.getItem("cart")) || {};
-
-// =======================
-// UPDATE UI TERJUAL
-// =======================
-function updateUI() {
-  document.getElementById("terjual-a4").innerText = penjualan.a4 || 0;
-  document.getElementById("terjual-pulpen").innerText = penjualan.pulpen || 0;
-}
-
-// =======================
-// TOMBOL TAMBAH / KURANG
-// =======================
-function tambah(id) {
-  let el = document.getElementById("qty-" + id);
-  let nilai = parseInt(el.innerText);
-  el.innerText = nilai + 1;
-}
-
-function kurang(id) {
-  let el = document.getElementById("qty-" + id);
-  let nilai = parseInt(el.innerText);
-  if (nilai > 0) {
-    el.innerText = nilai - 1;
-  }
-}
-
-// =======================
-// MASUK KERANJANG
-// =======================
-function tambahKeKeranjang() {
-  let jumlahA4 = parseInt(document.getElementById("qty-a4").innerText);
-  let jumlahPulpen = parseInt(document.getElementById("qty-pulpen").innerText);
-
-  if (jumlahA4 > 0) {
-    cart.a4 = (cart.a4 || 0) + jumlahA4;
-  }
-
-  if (jumlahPulpen > 0) {
-    cart.pulpen = (cart.pulpen || 0) + jumlahPulpen;
-  }
-
-  localStorage.setItem("cart", JSON.stringify(cart));
-
-  // reset qty setelah masuk keranjang
-  document.getElementById("qty-a4").innerText = 0;
-  document.getElementById("qty-pulpen").innerText = 0;
-
-  alert("Produk masuk ke keranjang!");
-}
-
-// =======================
-// CHECKOUT (INI YANG NENTUIN 🔥)
-// =======================
-function checkout() {
-  cart = JSON.parse(localStorage.getItem("cart")) || {};
-  penjualan = JSON.parse(localStorage.getItem("penjualan")) || {};
-
-  for (let produk in cart) {
-    penjualan[produk] = (penjualan[produk] || 0) + cart[produk];
-  }
-
-  localStorage.setItem("penjualan", JSON.stringify(penjualan));
-  localStorage.removeItem("cart");
-
-  cart = {}; // reset variabel
-
-  updateUI();
-
-  alert("Checkout berhasil! Penjualan bertambah.");
-}
-
-// =======================
-// INIT SAAT HALAMAN LOAD
-// =======================
-updateUI();
-</script>
+ </script>
 
