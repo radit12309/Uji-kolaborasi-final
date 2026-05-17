@@ -686,10 +686,8 @@ function render(){
   for(let i in cart){
     let sub = cart[i].harga * cart[i].qty;
     total += sub;
-
-    isi += `${i} x${cart[i].qty} = Rp ${sub}
-    <button onclick="removeItem('${i}')">❌</button><br>`;
-  }
+isi +=`${i} x${cart[i].qty} = Rp ${sub}
+button>onclick="removeItem('${i}')">❌</button><br>`; }
 
   document.getElementById("cartItems").innerHTML = isi || "Kosong";
   document.getElementById("total").innerText = total;
@@ -715,20 +713,16 @@ function checkout(){
     total += sub;
 
     // 🔥 TAMBAH KE PENJUALAN
-    penjualan[i] = (penjualan[i] || 0) + cart[i].qty;
-
-    pesan += `- ${i} x${cart[i].qty} = Rp ${sub}\n`;
-  }
-
-  // SIMPAN KE LOCAL STORAGE
+   penjualan[i] = (penjualan[i] || 0) + cart[i].qty;
+pesan +=`-${i} x${cart[i].qty} = Rp ${sub}\n`;}
+// SIMPAN KE LOCAL STORAGE
+ 
   localStorage.setItem("penjualan", JSON.stringify(penjualan));
 
   // ONGKIR
   let ongkir = 8000;
-  let grandTotal = total + ongkir;
-
-  pesan += `\nOngkir: Rp ${ongkir}`;
-  pesan += `\nTotal Barang: Rp ${total}`;
+  let grandTotal = total + ongkir; pesan += `\nOngkir: Rp ${ongkir}`;
+ pesan += `\nTotal Barang: Rp ${total}`;
   pesan += `\nTotal Bayar: Rp ${grandTotal}`;
 
   // RESET CART
