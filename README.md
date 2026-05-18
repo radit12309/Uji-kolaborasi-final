@@ -820,7 +820,7 @@ function render(){
     total += sub;
 
   isi += `${i} x${cart[i].qty} = Rp ${sub}
-   <button onclick="removeItem('${i}')">❌</button><br>`;
+ <button onclick="removeItem('${i}')">❌</button><br>`;
   }
 
   document.getElementById("cartItems").innerHTML = isi || "Kosong";
@@ -1062,6 +1062,98 @@ updateCounter();
 
 // Sync antar tab
 window.addEventListener("storage", updateCounter);
+</script>
+<script>
+let cart = {};
+
+// TAMBAH
+function add(nama,harga){
+if(!cart[nama]) cart[nama]={harga:harga,qty:0};
+cart[nama].qty++;
+render();
+}
+
+// KURANG 1
+function remove(nama){
+if(cart[nama]){
+cart[nama].qty--;
+if(cart[nama].qty<=0) delete cart[nama];
+}
+render();
+}
+
+// HAPUS ITEM
+function removeItem(nama){
+if(cart[nama]){
+delete cart[nama];
+}
+render();
+}
+
+// UPDATE QTY DISPLAY
+function updateQtyDisplay(){
+document.querySelectorAll("[id^='qty-']").forEach(el=>{
+el.innerText = 0;
+});
+
+for(let i in cart){
+let safeId = i.replace(/\s/g, "").replace(/[^a-zA-Z0-9]/g,"");
+let el = document.getElementById("qty-" + safeId);
+if(el){
+el.innerText = cart[i].qty;
+}
+}
+}
+
+// RENDER KERANJANG
+function render(){
+let isi="";
+let total=0;
+
+for(let i in cart){
+let sub = cart[i].harga * cart[i].qty;
+total += sub;
+
+isi += `${i} x${cart[i].qty} = Rp ${sub}  
+<button onclick="removeItem('${i}')">❌</button><br>`;
+
+}
+
+document.getElementById("cartItems").innerHTML = isi || "Kosong";
+document.getElementById("total").innerText = total;
+
+updateQtyDisplay();
+}
+
+// CHECKOUT WA + ONGKIR 8.000
+function checkout(){
+
+if(Object.keys(cart).length === 0){
+alert("Keranjang masih kosong!");
+return;
+}
+
+let pesan = "Halo, saya ingin beli:\n";
+let total = 0;
+
+for(let i in cart){
+let sub = cart[i].harga * cart[i].qty;
+total += sub;
+pesan += - ${i} x${cart[i].qty} = Rp ${sub}\n;
+}
+
+// 🚚 ONGKIR FIX
+let ongkir = 8000;
+let grandTotal = total + ongkir;
+
+pesan += \nOngkir: Rp ${ongkir};
+pesan += \nTotal Barang: Rp ${total};
+pesan += \nTotal Bayar: Rp ${grandTotal};
+
+window.open(
+"https://wa.me/6285655504887?text=" + encodeURIComponent(pesan)
+);
+}
 </script>
 <footer class="footer">
   <p>📍 Alamat Toko:</p>
