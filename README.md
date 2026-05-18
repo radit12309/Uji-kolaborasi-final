@@ -4,7 +4,23 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
 <title>ATK SEJAHTERA - Instrumen Profesional Modern</title>
+<h1>Pengunjung: <span id="counter">0</span></h1>
 
+<script>
+function updateCounter() {
+  let count = localStorage.getItem("visitorCount") || 0;
+  document.getElementById("counter").innerText = count;
+}
+
+let count = localStorage.getItem("visitorCount") || 0;
+count++;
+localStorage.setItem("visitorCount", count);
+
+updateCounter();
+
+// Sync antar tab
+window.addEventListener("storage", updateCounter);
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;0,6..72,800;1,6..72,400&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
  <head>
@@ -955,114 +971,6 @@ window.open(
 );
 } Gabung saja dengan script ini karena tadi masih kagak berhasil
 </script>
-<h1>Pengunjung: <span id="counter">0</span></h1>
-<script>
- let cart = {};
-
-// TAMBAH
-function add(nama,harga){
-if(!cart[nama]) cart[nama]={harga:harga,qty:0};
-cart[nama].qty++;
-render();
-}
-
-// KURANG 1
-function remove(nama){
-if(cart[nama]){
-cart[nama].qty--;
-if(cart[nama].qty<=0) delete cart[nama];
-}
-render();
-}
-
-// HAPUS ITEM
-function removeItem(nama){
-if(cart[nama]){
-delete cart[nama];
-}
-render();
-}
-
-// UPDATE QTY DISPLAY
-function updateQtyDisplay(){
-document.querySelectorAll("[id^='qty-']").forEach(el=>{
-el.innerText = 0;
-});
-
-for(let i in cart){
-let safeId = i.replace(/\s/g, "").replace(/[^a-zA-Z0-9]/g,"");
-let el = document.getElementById("qty-" + safeId);
-if(el){
-el.innerText = cart[i].qty;
-}
-}
-}
-
-// RENDER KERANJANG
-function render(){
-let isi="";
-let total=0;
-
-for(let i in cart){
-let sub = cart[i].harga * cart[i].qty;
-total += sub;
-
-isi += `${i} x${cart[i].qty} = Rp ${sub}  
-<button onclick="removeItem('${i}')">❌</button><br>`;
-
-}
-
-document.getElementById("cartItems").innerHTML = isi || "Kosong";
-document.getElementById("total").innerText = total;
-
-updateQtyDisplay();
-}
-
-// CHECKOUT WA + ONGKIR 8.000
-function checkout(){
-
-if(Object.keys(cart).length === 0){
-alert("Keranjang masih kosong!");
-return;
-}
-
-let pesan = "Halo, saya ingin beli:\n";
-let total = 0;
-
-for(let i in cart){
-let sub = cart[i].harga * cart[i].qty;
-total += sub;
-pesan += - ${i} x${cart[i].qty} = Rp ${sub}\n;
-}
-
-// 🚚 ONGKIR FIX
-let ongkir = 8000;
-let grandTotal = total + ongkir;
-
-pesan += \nOngkir: Rp ${ongkir};
-pesan += \nTotal Barang: Rp ${total};
-pesan += \nTotal Bayar: Rp ${grandTotal};
-
-window.open(
-"https://wa.me/6285655504887?text=" + encodeURIComponent(pesan)
-);
-}
-</script>
-<script>
-function updateCounter() {
-  let count = localStorage.getItem("visitorCount") || 0;
-  document.getElementById("counter").innerText = count;
-}
-
-let count = localStorage.getItem("visitorCount") || 0;
-count++;
-localStorage.setItem("visitorCount", count);
-
-updateCounter();
-
-// Sync antar tab
-window.addEventListener("storage", updateCounter);
-</script>
 <script>
 let cart = {};
 
@@ -1114,50 +1022,6 @@ for(let i in cart){
 let sub = cart[i].harga * cart[i].qty;
 total += sub;
 
-isi += `${i} x${cart[i].qty} = Rp ${sub}  
-<button onclick="removeItem('${i}')">❌</button><br>`;
-
-}
-
-document.getElementById("cartItems").innerHTML = isi || "Kosong";
-document.getElementById("total").innerText = total;
-
-updateQtyDisplay();
-}
-
-// CHECKOUT WA + ONGKIR 8.000
-function checkout(){
-
-if(Object.keys(cart).length === 0){
-alert("Keranjang masih kosong!");
-return;
-}
-
-let pesan = "Halo, saya ingin beli:\n";
-let total = 0;
-
-for(let i in cart){
-let sub = cart[i].harga * cart[i].qty;
-total += sub;
-pesan += - ${i} x${cart[i].qty} = Rp ${sub}\n;
-}
-
-// 🚚 ONGKIR FIX
-let ongkir = 8000;
-let grandTotal = total + ongkir;
-
-pesan += \nOngkir: Rp ${ongkir};
-pesan += \nTotal Barang: Rp ${total};
-pesan += \nTotal Bayar: Rp ${grandTotal};
-
-window.open(
-"https://wa.me/6285655504887?text=" + encodeURIComponent(pesan)
-);
-}
-</script>
-<footer class="footer">
-  <p>📍 Alamat Toko:</p>
-  <a id="alamat-link" href="#" target="_blank">
     Klik untuk lihat lokasi di Google Maps
   </a>
 </footer>
