@@ -800,7 +800,7 @@ function updateTerjualUI(){
     let safeId = toId(i);
     let el = document.getElementById("terjual-" + safeId);
 
-    if(el){
+   if(el){
       el.innerText = penjualan[i];
     } else {
       console.log("ID tidak ditemukan:", "terjual-" + safeId);
@@ -819,8 +819,8 @@ function render(){
     let sub = cart[i].harga * cart[i].qty;
     total += sub;
 
-    isi += `${i} x${cart[i].qty} = Rp ${sub}
-    <button onclick="removeItem('${i}')">❌</button><br>`;
+  isi += `${i} x${cart[i].qty} = Rp ${sub}
+   <button onclick="removeItem('${i}')">❌</button><br>`;
   }
 
   document.getElementById("cartItems").innerHTML = isi || "Kosong";
@@ -917,7 +917,6 @@ total += sub;
 
 isi += `${i} x${cart[i].qty} = Rp ${sub}  
 <button onclick="removeItem('${i}')">❌</button><br>`;
-
 }
 
 document.getElementById("cartItems").innerHTML = isi || "Kosong";
