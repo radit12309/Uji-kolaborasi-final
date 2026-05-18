@@ -622,28 +622,19 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
 <script>
-// =======================
-// CART (SEMENTARA)
-// =======================
 let cart = {};
-
-// =======================
-// LOAD PENJUALAN
-// =======================
 let penjualan = JSON.parse(localStorage.getItem("penjualan")) || {};
 
-// =======================
-// TAMBAH
-// =======================
+function toId(nama){
+  return nama.replace(/\s/g, "_").replace(/[^a-zA-Z0-9_]/g,"");
+}
+
 function add(nama,harga){
   if(!cart[nama]) cart[nama]={harga:harga,qty:0};
   cart[nama].qty++;
   render();
 }
 
-// =======================
-// KURANG
-// =======================
 function remove(nama){
   if(cart[nama]){
     cart[nama].qty--;
@@ -652,49 +643,35 @@ function remove(nama){
   render();
 }
 
-// =======================
-// HAPUS ITEM
-// =======================
 function removeItem(nama){
-  if(cart[nama]){
-    delete cart[nama];
-  }
+  delete cart[nama];
   render();
 }
 
-// =======================
-// UPDATE QTY DISPLAY
-// =======================
 function updateQtyDisplay(){
   document.querySelectorAll("[id^='qty-']").forEach(el=>{
     el.innerText = 0;
   });
 
   for(let i in cart){
-    let safeId = i.replace(/\s/g, "_").replace(/[^a-zA-Z0-9_]/g,"");
-    let el = document.getElementById("qty-" + safeId);
+    let id = toId(i);
+    let el = document.getElementById("qty-" + id);
     if(el){
       el.innerText = cart[i].qty;
     }
   }
 }
 
-// =======================
-// UPDATE TERJUAL UI 🔥
-// =======================
 function updateTerjualUI(){
   for(let i in penjualan){
-    let safeId = i.replace(/\s/g, "_").replace(/[^a-zA-Z0-9_]/g,"");
-    let el = document.getElementById("terjual-" + safeId);
+    let id = toId(i);
+    let el = document.getElementById("terjual-" + id);
     if(el){
       el.innerText = penjualan[i];
     }
   }
 }
 
-// =======================
-// RENDER KERANJANG
-// =======================
 function render(){
   let isi="";
   let total=0;
@@ -702,8 +679,10 @@ function render(){
   for(let i in cart){
     let sub = cart[i].harga * cart[i].qty;
     total += sub;
-isi +=`${i} x${cart[i].qty} = Rp ${sub}
-button>onclick="removeItem('${i}')">❌</button><br>`; }
+
+    isi += i + " x" + cart[i].qty + " = Rp " + sub +
+    " <button onclick=\"removeItem('" + i + "')\">❌</button><br>";
+  }
 
   document.getElementById("cartItems").innerHTML = isi || "Kosong";
   document.getElementById("total").innerText = total;
@@ -711,13 +690,10 @@ button>onclick="removeItem('${i}')">❌</button><br>`; }
   updateQtyDisplay();
 }
 
-// =======================
-// CHECKOUT + TAMBAH PENJUALAN 🔥🔥🔥
-// =======================
 function checkout(){
 
   if(Object.keys(cart).length === 0){
-    alert("Keranjang masih kosong!");
+    alert("Keranjang kosong!");
     return;
   }
 
@@ -728,248 +704,28 @@ function checkout(){
     let sub = cart[i].harga * cart[i].qty;
     total += sub;
 
-    // 🔥 TAMBAH KE PENJUALAN
-   penjualan[i] = (penjualan[i] || 0) + cart[i].qty;
-pesan +=`-${i} x${cart[i].qty} = Rp ${sub}\n`;}
-// SIMPAN KE LOCAL STORAGE
- 
+    penjualan[i] = (penjualan[i] || 0) + cart[i].qty;
+
+    pesan += "- " + i + " x" + cart[i].qty + " = Rp " + sub + "\n";
+  }
+
   localStorage.setItem("penjualan", JSON.stringify(penjualan));
 
-  // ONGKIR
   let ongkir = 8000;
-  let grandTotal = total + ongkir; pesan += `\nOngkir: Rp ${ongkir}`;
- pesan += `\nTotal Barang: Rp ${total}`;
-  pesan += `\nTotal Bayar: Rp ${grandTotal}`;
+  let grandTotal = total + ongkir;
 
-  // RESET CART
+  pesan += "\nOngkir: Rp " + ongkir;
+  pesan += "\nTotal Bayar: Rp " + grandTotal;
+
   cart = {};
   render();
   updateTerjualUI();
 
-  // WA
-  window.open(
-    "https://wa.me/6285655504887?// =======================
-// HELPER (BIAR ID AMAN)
-// =======================
-function toId(nama){
-  return nama.replace(/\s/g, "_").replace(/[^a-zA-Z0-9_]/g,"");
+  window.open("https://wa.me/6285655504887?text=" + encodeURIComponent(pesan));
 }
 
-// =======================
-// DATA
-// =======================
-let cart = {};
-let penjualan = JSON.parse(localStorage.getItem("penjualan")) || {};
-
-// =======================
-// TAMBAH
-// =======================
-function add(nama,harga){
-  if(!cart[nama]) cart[nama]={harga:harga,qty:0};
-  cart[nama].qty++;
-  render();
-}
-
-// =======================
-// KURANG
-// =======================
-function remove(nama){
-  if(cart[nama]){
-    cart[nama].qty--;
-    if(cart[nama].qty<=0) delete cart[nama];
-  }
-  render();
-}
-
-// =======================
-// HAPUS ITEM
-// =======================
-function removeItem(nama){
-  if(cart[nama]){
-    delete cart[nama];
-  }
-  render();
-}
-
-// =======================
-// UPDATE QTY DISPLAY
-// =======================
-function updateQtyDisplay(){
-  document.querySelectorAll("[id^='qty-']").forEach(el=>{
-    el.innerText = 0;
-  });
-
-  for(let i in cart){
-    let safeId = toId(i);
-    let el = document.getElementById("qty-" + safeId);
-    if(el){
-      el.innerText = cart[i].qty;
-    }
-  }
-}
-
-// =======================
-// UPDATE TERJUAL UI
-// =======================
-function updateTerjualUI(){
-  for(let i in penjualan){
-    let safeId = toId(i);
-    let el = document.getElementById("terjual-" + safeId);
-
-   if(el){
-      el.innerText = penjualan[i];
-    } else {
-      console.log("ID tidak ditemukan:", "terjual-" + safeId);
-    }
-  }
-}
-
-// =======================
-// RENDER KERANJANG
-// =======================
-function render(){
-  let isi="";
-  let total=0;
-
-  for(let i in cart){
-    let sub = cart[i].harga * cart[i].qty;
-    total += sub;
-
-  isi += `${i} x${cart[i].qty} = Rp ${sub}
- <button onclick="removeItem('${i}')">❌</button><br>`;
-  }
-
-  document.getElementById("cartItems").innerHTML = isi || "Kosong";
-  document.getElementById("total").innerText = total;
-
-  updateQtyDisplay();
-}
-
-// =======================
-// CHECKOUT + PENJUALAN
-// =======================
-function checkout(){
-// =======================
-// DATA
-// =======================
-let cart = {};
-let penjualan = JSON.parse(localStorage.getItem("penjualan")) || {};
-
-// =======================
-// TAMBAH
-// =======================
-function add(id, nama, harga){
-  if(!cart[id]) cart[id]={nama:nama,harga:harga,qty:0};
-  cart[id].qty++;
-  render();
-}
-
-// =======================
-// KURANG
-// =======================
-function remove(id){
-  if(cart[id]){
-    cart[id].qty--;
-    if(cart[id].qty<=0) delete cart[id];
-  }
-  render();
-}
-
-// =======================
-// HAPUS ITEM
-// =======================
-function removeItem(id){
-  delete cart[id];
-  render();
-let cart = {};
-
-// TAMBAH
-function add(nama,harga){
-if(!cart[nama]) cart[nama]={harga:harga,qty:0};
-cart[nama].qty++;
-render();
-}
-
-// KURANG 1
-function remove(nama){
-if(cart[nama]){
-cart[nama].qty--;
-if(cart[nama].qty<=0) delete cart[nama];
-}
-render();
-}
-
-// HAPUS ITEM
-function removeItem(nama){
-if(cart[nama]){
-delete cart[nama];
-}
-render();
-}
-
-// UPDATE QTY DISPLAY
-function updateQtyDisplay(){
-document.querySelectorAll("[id^='qty-']").forEach(el=>{
-el.innerText = 0;
-});
-
-for(let i in cart){
-let safeId = i.replace(/\s/g, "").replace(/[^a-zA-Z0-9]/g,"");
-let el = document.getElementById("qty-" + safeId);
-if(el){
-el.innerText = cart[i].qty;
-}
-}
-}
-
-// RENDER KERANJANG
-function render(){
-let isi="";
-let total=0;
-
-for(let i in cart){
-let sub = cart[i].harga * cart[i].qty;
-total += sub;
-
-isi += `${i} x${cart[i].qty} = Rp ${sub}  
-<button onclick="removeItem('${i}')">❌</button><br>`;
-}
-
-document.getElementById("cartItems").innerHTML = isi || "Kosong";
-document.getElementById("total").innerText = total;
-
-updateQtyDisplay();
-}
-
-// CHECKOUT WA + ONGKIR 8.000
-function checkout(){
-
-if(Object.keys(cart).length === 0){
-alert("Keranjang masih kosong!");
-return;
-}
-
-let pesan = "Halo, saya ingin beli:\n";
-let total = 0;
-
-for(let i in cart){
-let sub = cart[i].harga * cart[i].qty;
-total += sub;
-pesan += - ${i} x${cart[i].qty} = Rp ${sub}\n;
-}
-
-// 🚚 ONGKIR FIX
-let ongkir = 8000;
-let grandTotal = total + ongkir;
-
-pesan += \nOngkir: Rp ${ongkir};
-pesan += \nTotal Barang: Rp ${total};
-pesan += \nTotal Bayar: Rp ${grandTotal};
-
-window.open(
-"https://wa.me/6285655504887?text=" + encodeURIComponent(pesan)
-);
-} Gabung saja dengan script ini karena tadi masih kagak berhasil
+updateTerjualUI();
+render();ak berhasil
 </script>
 <script>
 let cart = {};
