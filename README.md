@@ -76,6 +76,7 @@ window.addEventListener("storage", updateCounter);
   border-radius: 6px;
   display: none;
   font-weight: bold;
+}
 
 .footer a {
   color: #ffffff;
@@ -116,7 +117,7 @@ window.addEventListener("storage", updateCounter);
 </div>
 <div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-12 gap-16 items-center relative z-10">
 <div class="lg:col-span-7">
-<span class="text-gold font-body text-xs font-bold tracking-[0.3em] uppercase mb-6 block">“Warisan • Sejak 2010”</span>
+<span class="text-gold font-body text-xs font-bold tracking-[0.3em] uppercase mb-6 block">"Warisan • Sejak 2010"</span>
 <h1 style="color: white;" class="text-5xl md:text-7xl font-headline font-extrabold tracking-tight mb-8 leading-[1.05]">
                 Solusi Kebutuhan Kantor
 <span class="serif-italic text-gold">Terbaik &amp; Terpercaya</span>
@@ -128,7 +129,7 @@ window.addEventListener("storage", updateCounter);
 </div>
 <div class="lg:col-span-5">
 <div class="relative rounded-sm overflow-hidden aspect-[3/4] border-[12px] border-white/5 premium-shadow">
-<img alt="Premium Stationery" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNuQijbvAGgDAQym--EphKkSrmcWdEnF8wBgqy_w6fJSpbSvy8tk0St6-33PItEISsC_x8PNKbOpCiOBw3c_tA7NVbDt36dge61kBnLG_Zun5167H6w2qYUUcNhUppyRFaDZ6v8y9qcDntf1dsSxDQR3Cyvhues2lZga7DTfVYceYiZjPTN5STqHwvvp9SLwSRGFTIGEGEK6KGA81t7SaAGjegD8G9siUzuzlg_fdlgdnylhg_nEiP7EyPU-9QSJwjAIcxMevLjK7U"/>
+<img alt="Premium Stationery" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNuQijbvAGgDAQym--EphKkSrmcWdEnF8wBgqy_w6fJSpbSvy8tk0St6-33PItEISsC_x8PNKbOpCi[...]
 <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
 </div>
 </div>
@@ -174,7 +175,7 @@ window.addEventListener("storage", updateCounter);
 <button onclick="remove('isi stapler Joyko HD-10')"   
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>  
 <span id="qty-isi_stapler_Joyko_HD10">0</span>  
-<button onclick="add('isi stapler Joyko HD-10',15000)"   
+<button onclick="add('isi stapler Joyko HD-10',23000)"   
     class="px-3 py-1 bg-green-500 text-white rounded">+</button>  </div>  
 </div>  
 </div>  
@@ -194,7 +195,7 @@ window.addEventListener("storage", updateCounter);
 <p class="text-sm font-body font-medium text-slate-400">Harga Satuan</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 15.000</p>
-<button onclick="remove(' stapler Joyko HD-10')" 
+<button onclick="remove('stapler Joyko HD-10')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
 <span id="qty-stapler_Joyko_HD10">0</span>
   <button onclick="add('stapler Joyko HD-10',15000)" 
@@ -343,7 +344,7 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <p class="text-sm font-body font-medium text-slate-400">Harga per pack(100 lembar)</p>
 <div class="flex justify-between items-end">
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 16.000</p>
-<button onclick="remove('Post_it 3M 654 73x73mm catatan tempel')" 
+<button onclick="remove('Post it 3M 654 73x73mm catatan tempel')" 
     class="px-3 py-1 bg-red-500 text-white rounded">-</button>
 <span id="qty-Post_it_3M_654_73x73mm_catatan_tempel">0</span>
 <button onclick="add('Post it 3M 654 73x73mm catatan tempel',16000)" 
@@ -563,10 +564,10 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 <div class="flex justify-between items-end">  
 <p class="text-2xl font-headline font-extrabold text-primary">Rp 50.000</p>  
 
-<button onclick="remove('Paket 6 roll')"   
+<button onclick="remove('Lakban daimaru/nachi')"   
 class="px-3 py-1 bg-red-500 text-white rounded">-</button>  
-<span id="qty-Paket_6_roll">0</span>
-<button onclick="add('Paket 6 roll',50000)"   
+<span id="qty-Lakban_daimaru_nachi">0</span>
+<button onclick="add('Lakban daimaru/nachi',50000)"   
 class="px-3 py-1 bg-green-500 text-white rounded">+</button>  
 </div>  
 </div>  
@@ -576,7 +577,8 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
   <div class="flex flex-col gap-8 lg:items-end">
 <!-- 🛒 Keranjang -->
 
-<h2><div class="relative mt-20 p-6 bg-white border rounded-lg shadow grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:ml-auto w-full lg:w-[400px]">Keranjang
+<div class="relative mt-20 p-6 bg-white border rounded-lg shadow grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:ml-auto w-full lg:w-[400px]">
+<h2>Keranjang</h2>
 
   <div id="cartItems" class="text-sm mb-3">Kosong</div>
 
@@ -622,122 +624,6 @@ class="px-3 py-1 bg-green-500 text-white rounded">+</button>
 </div>
 </div>
 <script>
-let cart = {};
-let penjualan = JSON.parse(localStorage.getItem("penjualan")) || {};
-
-function toId(nama){
-  return nama.replace(/\s/g, "_").replace(/[^a-zA-Z0-9_]/g,"");
-}
-
-function add(nama,harga){
-  if(!cart[nama]) cart[nama]={harga:harga,qty:0};
-  cart[nama].qty++;
-  render();
-}
-
-function remove(nama){
-  if(cart[nama]){
-    cart[nama].qty--;
-    if(cart[nama].qty<=0) delete cart[nama];
-  }
-  render();
-}
-
-function removeItem(nama){
-  delete cart[nama];
-  render();
-}
-
-function updateQtyDisplay(){
-  document.querySelectorAll("[id^='qty-']").forEach(el=>{
-    el.innerText = 0;
-  });
-
-  for(let i in cart){
-    let id = toId(i);
-    let el = document.getElementById("qty-" + id);
-    if(el){
-      el.innerText = cart[i].qty;
-    }
-  }
-}
-
-function updateTerjualUI(){
-  for(let i in penjualan){
-    let id = toId(i);
-    let el = document.getElementById("terjual-" + id);
-    if(el){
-      el.innerText = penjualan[i];
-    }
-  }
-}
-
-function render(){
-  let isi="";
-  let total=0;
-
-  for(let i in cart){
-    let sub = cart[i].harga * cart[i].qty;
-    total += sub;
-
-    isi += i + " x" + cart[i].qty + " = Rp " + sub +
-    " <button onclick=\"removeItem('" + i + "')\">❌</button><br>";
-  }
-
-  document.getElementById("cartItems").innerHTML = isi || "Kosong";
-  document.getElementById("total").innerText = total;
-
-  updateQtyDisplay();
-}
-
-function checkout(){
-
-  if(Object.keys(cart).length === 0){
-    alert("Keranjang kosong!");
-    return;
-  }
-
-  let pesan = "Halo, saya ingin beli:\n";
-  let total = 0;
-
-  for(let i in cart){
-    let sub = cart[i].harga * cart[i].qty;
-    total += sub;
-
-    penjualan[i] = (penjualan[i] || 0) + cart[i].qty;
-
-    pesan += "- " + i + " x" + cart[i].qty + " = Rp " + sub + "\n";
-  }
-
-  localStorage.setItem("penjualan", JSON.stringify(penjualan));
-
-  let ongkir = 8000;
-  let grandTotal = total + ongkir;
-
-  pesan += "\nOngkir: Rp " + ongkir;
-  pesan += "\nTotal Bayar: Rp " + grandTotal;
-
-  cart = {};
-  render();
-  updateTerjualUI();
-
-  window.open("https://wa.me/6285655504887?text=" + encodeURIComponent(pesan));
-}
-
-updateTerjualUI();
-render();ak berhasil
-</script>
-<script>
-let cart = {};
-
-// TAMBAH
-function add(nama,harga){
-if(!cart[nama]) cart[nama]={harga:harga,qty:0};
-cart[nama].qty++;
-render();
-}
-
-// KURANG 1
 let cart = {};
 let penjualan = JSON.parse(localStorage.getItem("penjualan")) || {};
 
@@ -850,13 +736,14 @@ window.onload = function(){
 };
 </script>
   <footer> 
-  <a> Klik untuk lihat lokasi di Google Maps
+  <a id="alamat-link"> Klik untuk lihat lokasi di Google Maps
   </a>
 </footer>
 <script>
   const alamat = "R9JC+JGH Sumberagung, Kabupaten Jember, Jawa Timur"; 
   const link = "https://www.google.com/maps?q=" + encodeURIComponent(alamat);
 
-document.getElementById("alamat-link").href = link;
- </script>
-
+  document.getElementById("alamat-link").href = link;
+</script>
+</body>
+</html>
