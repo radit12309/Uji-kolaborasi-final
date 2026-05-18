@@ -128,7 +128,7 @@
 <div class="p-8 flex flex-col flex-grow">
 <span class="text-[10px] font-body font-bold tracking-[0.2em] text-gold uppercase mb-2">kertas & media</span>
 <h3 class="nama-produk text-xl font-headline font-bold text-primary mb-6 flex-grow">kertas papperline A4</h3>
-<span id="terjual-Kertas_Paperline_A4">0</span>
+<p>Terjual: <span id="terjual-a4">0</span></p>
 <div class="flex flex-col gap-4">
 <p class="text-sm font-body font-medium text-slate-400">Harga per rim</p>
 <div class="flex justify-between items-end">
@@ -833,50 +833,124 @@ function render(){
 // CHECKOUT + PENJUALAN
 // =======================
 function checkout(){
+// =======================
+// DATA
+// =======================
+let cart = {};
+let penjualan = JSON.parse(localStorage.getItem("penjualan")) || {};
 
+// =======================
+// TAMBAH
+// =======================
+function add(id, nama, harga){
+  if(!cart[id]) cart[id]={nama:nama,harga:harga,qty:0};
+  cart[id].qty++;
+  render();
+}
+
+// =======================
+// KURANG
+// =======================
+function remove(id){
+  if(cart[id]){
+    cart[id].qty--;
+    if(cart[id].qty<=0) delete cart[id];
+  }
+  render();
+}
+
+// =======================
+// HAPUS ITEM
+// =======================
+function removeItem(id){
+  delete cart[id];
+  render();
+}
+
+// =======================
+// UPDATE QTY
+// =======================
+function updateQtyDisplay(){
+  document.querySelectorAll("[id^='qty-']").forEach(el=>{
+    el.innerText = 0;
+  });
+
+  for(let id in cart){
+    let el = document.getElementById("qty-" + id);
+    if(el){
+      el.innerText = cart[id].qty;
+    }
+  }
+}
+
+// =======================
+// UPDATE TERJUAL 🔥
+// =======================
+function updateTerjualUI(){
+  for(let id in penjualan){
+    let el = document.getElementById("terjual-" + id);
+    if(el){
+      el.innerText = penjualan[id];
+    }
+  }
+}
+
+// =======================
+// RENDER
+// =======================
+function render(){
+  let isi="";
+  let total=0;
+
+  for(let id in cart){
+    let item = cart[id];
+    let sub = item.harga * item.qty;
+    total += sub;
+     isi += `${item.nama} x${item.qty} = Rp ${sub}  
+ <button onclick="removeItem('${id}')">❌</button><br>`;
+  }
+
+  document.getElementById("cartItems").innerHTML = isi || "Kosong";
+  document.getElementById("total").innerText = total;
+
+  updateQtyDisplay();
+}
+
+// =======================
+// CHECKOUT 🔥
+// =======================
+function checkout(){
   if(Object.keys(cart).length === 0){
-    alert("Keranjang masih kosong!");
+    alert("Keranjang kosong!");
     return;
   }
 
   let pesan = "Halo, saya ingin beli:\n";
   let total = 0;
 
-  console.log("CART:", cart);
-  console.log("PENJUALAN SEBELUM:", penjualan);
-
-  for(let i in cart){
-    let sub = cart[i].harga * cart[i].qty;
+  for(let id in cart){
+    let item = cart[id];
+    let sub = item.harga * item.qty;
     total += sub;
 
-    // TAMBAH KE PENJUALAN 🔥
-    penjualan[i] = (penjualan[i] || 0) + cart[i].qty;
-
-    pesan += `- ${i} x${cart[i].qty} = Rp ${sub}\n`;
+    // 🔥 TAMBAH PENJUALAN
+  penjualan[id] = (penjualan[id] || 0) + item.qty;
+ pesan +=`-${item.nama}x${item.qty} = Rp ${sub}\n`;
   }
 
-  console.log("PENJUALAN SESUDAH:", penjualan);
-
-  // SIMPAN
   localStorage.setItem("penjualan", JSON.stringify(penjualan));
 
-  // ONGKIR
   let ongkir = 8000;
   let grandTotal = total + ongkir;
 
   pesan += `\nOngkir: Rp ${ongkir}`;
-  pesan += `\nTotal Barang: Rp ${total}`;
-  pesan += `\nTotal Bayar: Rp ${grandTotal}`;
+  pesan += `\nTotal: Rp ${grandTotal}`;
 
-  // RESET CART
   cart = {};
   render();
   updateTerjualUI();
 
-  // WA
-  window.open(
-    "https://wa.me/6285655504887?text=" + encodeURIComponent(pesan)
-  );
+  window.open("https://wa.me/6285655504887?text=" + encodeURIComponent(pesan));
 }
 
 // =======================
