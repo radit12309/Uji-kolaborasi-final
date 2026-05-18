@@ -738,47 +738,119 @@ render();
 }
 
 // KURANG 1
+let cart = {};
+let penjualan = JSON.parse(localStorage.getItem("penjualan")) || {};
+
+function toId(nama){
+  return nama.replace(/\s/g, "_").replace(/[^a-zA-Z0-9_]/g,"");
+}
+
+function add(nama,harga){
+  if(!cart[nama]) cart[nama]={harga:harga,qty:0};
+  cart[nama].qty++;
+  render();
+}
+
 function remove(nama){
-if(cart[nama]){
-cart[nama].qty--;
-if(cart[nama].qty<=0) delete cart[nama];
-}
-render();
+  if(cart[nama]){
+    cart[nama].qty--;
+    if(cart[nama].qty<=0) delete cart[nama];
+  }
+  render();
 }
 
-// HAPUS ITEM
 function removeItem(nama){
-if(cart[nama]){
-delete cart[nama];
-}
-render();
+  delete cart[nama];
+  render();
 }
 
-// UPDATE QTY DISPLAY
 function updateQtyDisplay(){
-document.querySelectorAll("[id^='qty-']").forEach(el=>{
-el.innerText = 0;
-});
+  document.querySelectorAll("[id^='qty-']").forEach(el=>{
+    el.innerText = 0;
+  });
 
-for(let i in cart){
-let safeId = i.replace(/\s/g, "").replace(/[^a-zA-Z0-9]/g,"");
-let el = document.getElementById("qty-" + safeId);
-if(el){
-el.innerText = cart[i].qty;
-}
-}
+  for(let i in cart){
+    let id = toId(i);
+    let el = document.getElementById("qty-" + id);
+    if(el){
+      el.innerText = cart[i].qty;
+    }
+  }
 }
 
-// RENDER KERANJANG
+function updateTerjualUI(){
+  for(let i in penjualan){
+    let id = toId(i);
+    let el = document.getElementById("terjual-" + id);
+    if(el){
+      el.innerText = penjualan[i];
+    }
+  }
+}
+
 function render(){
-let isi="";
-let total=0;
+  let isi="";
+  let total=0;
 
-for(let i in cart){
-let sub = cart[i].harga * cart[i].qty;
-total += sub;
+  for(let i in cart){
+    let sub = cart[i].harga * cart[i].qty;
+    total += sub;
 
-    Klik untuk lihat lokasi di Google Maps
+    isi += i + " x" + cart[i].qty + " = Rp " + sub +
+    " <button onclick=\"removeItem('" + i + "')\">❌</button><br>";
+  }
+
+  let cartEl = document.getElementById("cartItems");
+  let totalEl = document.getElementById("total");
+
+  if(cartEl) cartEl.innerHTML = isi || "Kosong";
+  if(totalEl) totalEl.innerText = total;
+
+  updateQtyDisplay();
+}
+
+function checkout(){
+
+  if(Object.keys(cart).length === 0){
+    alert("Keranjang kosong!");
+    return;
+  }
+
+  let pesan = "Halo, saya ingin beli:\n";
+  let total = 0;
+
+  for(let i in cart){
+    let sub = cart[i].harga * cart[i].qty;
+    total += sub;
+
+    penjualan[i] = (penjualan[i] || 0) + cart[i].qty;
+
+    pesan += "- " + i + " x" + cart[i].qty + " = Rp " + sub + "\n";
+  }
+
+  localStorage.setItem("penjualan", JSON.stringify(penjualan));
+
+  let ongkir = 8000;
+  let grandTotal = total + ongkir;
+
+  pesan += "\nOngkir: Rp " + ongkir;
+  pesan += "\nTotal Bayar: Rp " + grandTotal;
+
+  cart = {};
+  render();
+  updateTerjualUI();
+
+  window.open("https://wa.me/6285655504887?text=" + encodeURIComponent(pesan));
+}
+
+// INIT (ANTI ERROR LOAD)
+window.onload = function(){
+  updateTerjualUI();
+  render();
+};
+</script>
+  <footer> 
+  <a> Klik untuk lihat lokasi di Google Maps
   </a>
 </footer>
 <script>
